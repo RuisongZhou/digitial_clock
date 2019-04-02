@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: top_module.prj
 
@@ -141,17 +141,12 @@ Elaborating module <top_module>.
 Elaborating module <clk_divider>.
 
 Elaborating module <clock>.
-WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\clock.v" Line 67: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\clock.v" Line 77: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\clock.v" Line 84: Result of 9-bit expression is truncated to fit in 8-bit target.
 
 Elaborating module <counter_60>.
-WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\counter_60.v" Line 38: Result of 2-bit expression is truncated to fit in 1-bit target.
 
 Elaborating module <counter_10>.
 
 Elaborating module <counter_6>.
-WARNING:HDLCompiler:634 - "F:\FPGAcode\digital_clock\counter_60.v" Line 42: Net <clk> does not have a driver.
 
 Elaborating module <counter_24>.
 WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\counter_24.v" Line 32: Result of 5-bit expression is truncated to fit in 4-bit target.
@@ -164,23 +159,23 @@ WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\calltime.v" Line 46: Result
 WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\calltime.v" Line 50: Result of 9-bit expression is truncated to fit in 8-bit target.
 
 Elaborating module <display_driver>.
-WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 57: Result of 9-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 59: Result of 32-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 63: Result of 32-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 96: Result of 8-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 99: Result of 8-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 59: Result of 9-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 62: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 63: Result of 6-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 64: Result of 32-bit expression is truncated to fit in 4-bit target.
 WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 102: Result of 8-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 104: Result of 8-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 106: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:189 - "F:\FPGAcode\digital_clock\top_module.v" Line 119: Size mismatch in connection of port <chooseButtion>. Formal port size is 1-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 105: Result of 8-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 108: Result of 8-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 110: Result of 8-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 112: Result of 4-bit expression is truncated to fit in 3-bit target.
 
 Elaborating module <decoder_38>.
 
 Elaborating module <seven_seg_driver>.
-WARNING:HDLCompiler:189 - "F:\FPGAcode\digital_clock\top_module.v" Line 132: Size mismatch in connection of port <point>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "F:\FPGAcode\digital_clock\top_module.v" Line 133: Size mismatch in connection of port <point>. Formal port size is 1-bit while actual signal size is 32-bit.
 
 Elaborating module <time_set>.
-WARNING:HDLCompiler:634 - "F:\FPGAcode\digital_clock\top_module.v" Line 134: Net <clk_divider> does not have a driver.
+WARNING:HDLCompiler:634 - "F:\FPGAcode\digital_clock\top_module.v" Line 135: Net <clk_divider> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -211,32 +206,17 @@ Unit <clk_divider> synthesized.
 
 Synthesizing Unit <clock>.
     Related source file is "F:\FPGAcode\digital_clock\clock.v".
-WARNING:Xst:647 - Input <settingButton<1:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1-bit register for signal <min_clk>.
-    Found 8-bit register for signal <count_min>.
     Found 1-bit register for signal <hour_clk>.
-    Found 1-bit register for signal <EN_signal>.
-    Found 8-bit register for signal <count_sec>.
-    Found 8-bit adder for signal <count_min[7]_GND_3_o_add_2_OUT> created at line 67.
-    Found 8-bit adder for signal <count_min[7]_GND_3_o_add_7_OUT> created at line 77.
-    Found 8-bit adder for signal <count_sec[7]_GND_3_o_add_9_OUT> created at line 84.
+    Found 1-bit register for signal <min_clk>.
     Summary:
-	inferred   3 Adder/Subtractor(s).
-	inferred  19 D-type flip-flop(s).
-	inferred   4 Multiplexer(s).
+	inferred   2 D-type flip-flop(s).
 Unit <clock> synthesized.
 
 Synthesizing Unit <counter_60>.
     Related source file is "F:\FPGAcode\digital_clock\counter_60.v".
-WARNING:Xst:647 - Input <CP> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <clk> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 1-bit register for signal <c6_clk>.
-    Found 4-bit register for signal <count_c6>.
-    Found 1-bit adder for signal <c6_clk_PWR_4_o_add_3_OUT<0>> created at line 38.
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred   5 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
+	inferred   1 D-type flip-flop(s).
 Unit <counter_60> synthesized.
 
 Synthesizing Unit <counter_10>.
@@ -310,41 +290,42 @@ Synthesizing Unit <display_driver>.
     Found 3-bit register for signal <pos>.
     Found 4-bit register for signal <num>.
     Found 4-bit register for signal <d_num1>.
-    Found 8-bit adder for signal <n0042> created at line 57.
-    Found 3-bit adder for signal <pos[2]_GND_11_o_add_28_OUT> created at line 106.
-    Found 5-bit subtractor for signal <GND_11_o_GND_11_o_sub_6_OUT<4:0>> created at line 59.
-    Found 4-bit subtractor for signal <GND_11_o_GND_11_o_sub_10_OUT<3:0>> created at line 63.
-    Found 4x4-bit multiplier for signal <n0065> created at line 57.
-    Found 4x4-bit multiplier for signal <PWR_10_o_clockHour[7]_MuLt_8_OUT> created at line 63.
-    Found 4-bit 7-to-1 multiplexer for signal <pos[2]_PWR_10_o_wide_mux_27_OUT> created at line 82.
-    Found 5-bit comparator greater for signal <GND_11_o_clockHour[7]_LessThan_5_o> created at line 58
+    Found 8-bit adder for signal <n0043> created at line 59.
+    Found 3-bit adder for signal <pos[2]_GND_11_o_add_30_OUT> created at line 112.
+    Found 6-bit subtractor for signal <GND_11_o_GND_11_o_sub_6_OUT<5:0>> created at line 62.
+    Found 4-bit subtractor for signal <GND_11_o_GND_11_o_sub_9_OUT<3:0>> created at line 64.
+    Found 4x4-bit multiplier for signal <n0067> created at line 59.
+    Found 4x4-bit multiplier for signal <PWR_10_o_GND_11_o_MuLt_7_OUT> created at line 64.
+    Found 4-bit 7-to-1 multiplexer for signal <pos[2]_PWR_10_o_wide_mux_29_OUT> created at line 88.
+    Found 6-bit comparator greater for signal <GND_11_o_clockHour[7]_LessThan_5_o> created at line 61
     Summary:
 	inferred   2 Multiplier(s).
 	inferred   4 Adder/Subtractor(s).
 	inferred  31 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred   8 Multiplexer(s).
+	inferred   9 Multiplexer(s).
 Unit <display_driver> synthesized.
 
-Synthesizing Unit <mod_5u_4u>.
+Synthesizing Unit <div_6u_4u>.
     Related source file is "".
-    Found 9-bit adder for signal <GND_12_o_b[3]_add_1_OUT> created at line 0.
-    Found 8-bit adder for signal <GND_12_o_b[3]_add_3_OUT> created at line 0.
-    Found 7-bit adder for signal <GND_12_o_b[3]_add_5_OUT> created at line 0.
-    Found 6-bit adder for signal <GND_12_o_b[3]_add_7_OUT> created at line 0.
-    Found 5-bit adder for signal <a[4]_b[3]_add_9_OUT> created at line 0.
-    Found 5-bit adder for signal <a[4]_GND_12_o_add_11_OUT> created at line 0.
-    Found 9-bit comparator lessequal for signal <BUS_0001> created at line 0
-    Found 8-bit comparator lessequal for signal <BUS_0002> created at line 0
-    Found 7-bit comparator lessequal for signal <BUS_0003> created at line 0
-    Found 6-bit comparator lessequal for signal <BUS_0004> created at line 0
-    Found 5-bit comparator lessequal for signal <BUS_0005> created at line 0
-    Found 5-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 10-bit adder for signal <GND_12_o_b[3]_add_1_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_12_o_b[3]_add_3_OUT> created at line 0.
+    Found 8-bit adder for signal <GND_12_o_b[3]_add_5_OUT> created at line 0.
+    Found 7-bit adder for signal <GND_12_o_b[3]_add_7_OUT> created at line 0.
+    Found 6-bit adder for signal <a[5]_b[3]_add_9_OUT[5:0]> created at line 0.
+    Found 6-bit adder for signal <a[5]_GND_12_o_add_11_OUT[5:0]> created at line 0.
+    Found 10-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 6-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 6-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 6-bit comparator lessequal for signal <BUS_0007> created at line 0
     Summary:
 	inferred   6 Adder/Subtractor(s).
-	inferred   6 Comparator(s).
-	inferred  26 Multiplexer(s).
-Unit <mod_5u_4u> synthesized.
+	inferred   7 Comparator(s).
+	inferred  21 Multiplexer(s).
+Unit <div_6u_4u> synthesized.
 
 Synthesizing Unit <decoder_38>.
     Related source file is "F:\FPGAcode\digital_clock\decoder_38.v".
@@ -379,43 +360,42 @@ Macro Statistics
  8x8-bit single-port Read Only RAM                     : 1
 # Multipliers                                          : 3
  4x4-bit multiplier                                    : 3
-# Adders/Subtractors                                   : 30
- 1-bit adder                                           : 2
+# Adders/Subtractors                                   : 25
+ 10-bit adder                                          : 1
  3-bit adder                                           : 1
  32-bit adder                                          : 3
  4-bit adder                                           : 10
  4-bit subtractor                                      : 1
- 5-bit adder                                           : 2
- 5-bit subtractor                                      : 1
- 6-bit adder                                           : 1
+ 6-bit adder                                           : 2
+ 6-bit subtractor                                      : 1
  7-bit adder                                           : 1
- 8-bit adder                                           : 7
+ 8-bit adder                                           : 4
  9-bit adder                                           : 1
-# Registers                                            : 39
- 1-bit register                                        : 11
+# Registers                                            : 34
+ 1-bit register                                        : 10
  2-bit register                                        : 2
  3-bit register                                        : 1
  32-bit register                                       : 3
- 4-bit register                                        : 19
- 8-bit register                                        : 3
-# Comparators                                          : 21
+ 4-bit register                                        : 17
+ 8-bit register                                        : 1
+# Comparators                                          : 22
+ 10-bit comparator lessequal                           : 1
  32-bit comparator greater                             : 3
  4-bit comparator greater                              : 6
  4-bit comparator lessequal                            : 2
- 5-bit comparator greater                              : 1
- 5-bit comparator lessequal                            : 2
- 6-bit comparator lessequal                            : 1
+ 6-bit comparator greater                              : 1
+ 6-bit comparator lessequal                            : 3
  7-bit comparator lessequal                            : 1
  8-bit comparator equal                                : 2
  8-bit comparator lessequal                            : 2
  9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 57
- 1-bit 2-to-1 multiplexer                              : 27
+# Multiplexers                                         : 47
+ 1-bit 2-to-1 multiplexer                              : 18
  32-bit 2-to-1 multiplexer                             : 3
- 4-bit 2-to-1 multiplexer                              : 19
+ 4-bit 2-to-1 multiplexer                              : 20
  4-bit 7-to-1 multiplexer                              : 1
- 5-bit 2-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 6
+ 6-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 2
 
 =========================================================================
 
@@ -423,44 +403,7 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <Cnt_1> (without init value) has a constant value of 0 in block <alarm_minute_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_2> (without init value) has a constant value of 0 in block <alarm_minute_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_3> (without init value) has a constant value of 0 in block <alarm_minute_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_c6_0> has a constant value of 0 in block <alarm_minute>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_c6_1> has a constant value of 0 in block <alarm_minute>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_c6_2> has a constant value of 0 in block <alarm_minute>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_c6_3> has a constant value of 0 in block <alarm_minute>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <c6_clk> has a constant value of 1 in block <alarm_minute>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <d_num5_0> (without init value) has a constant value of 0 in block <ddriver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <d_num5_1> (without init value) has a constant value of 0 in block <ddriver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <d_num5_2> (without init value) has a constant value of 0 in block <ddriver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <d_num5_3> (without init value) has a constant value of 0 in block <ddriver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <d_num6_0> (without init value) has a constant value of 0 in block <ddriver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <d_num6_1> (without init value) has a constant value of 0 in block <ddriver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <d_num6_2> (without init value) has a constant value of 0 in block <ddriver>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <d_num6_3> (without init value) has a constant value of 0 in block <ddriver>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <time_light> (without init value) has a constant value of 0 in block <setting>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_0> (without init value) has a constant value of 0 in block <alarm_minute_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_1> (without init value) has a constant value of 0 in block <alarm_minute_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_2> (without init value) has a constant value of 0 in block <alarm_minute_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_3> (without init value) has a constant value of 0 in block <alarm_minute_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_0> (without init value) has a constant value of 0 in block <alarm_minute_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_1> (without init value) has a constant value of 0 in block <alarm_minute_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_2> (without init value) has a constant value of 0 in block <alarm_minute_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_3> (without init value) has a constant value of 0 in block <alarm_minute_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_c6_0> has a constant value of 0 in block <alarm_second>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_c6_1> has a constant value of 0 in block <alarm_second>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_c6_2> has a constant value of 0 in block <alarm_second>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_c6_3> has a constant value of 0 in block <alarm_second>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <c6_clk> has a constant value of 1 in block <alarm_second>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_0> (without init value) has a constant value of 0 in block <alarm_minute_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_1> (without init value) has a constant value of 0 in block <alarm_minute_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_2> (without init value) has a constant value of 0 in block <alarm_minute_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_3> (without init value) has a constant value of 0 in block <alarm_minute_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <Cnt_0> (without init value) has a constant value of 0 in block <alarm_minute_1>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <clockSetting_1> of sequential type is unconnected in block <top_module>.
-WARNING:Xst:1290 - Hierarchical block <alarm_second> is unconnected in block <clock_1>.
-   It will be removed from the design.
 
 Synthesizing (advanced) Unit <CallTime>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
@@ -470,10 +413,6 @@ Unit <CallTime> synthesized (advanced).
 Synthesizing (advanced) Unit <clk_divider>.
 The following registers are absorbed into counter <count>: 1 register on signal <count>.
 Unit <clk_divider> synthesized (advanced).
-
-Synthesizing (advanced) Unit <clock>.
-The following registers are absorbed into counter <count_sec>: 1 register on signal <count_sec>.
-Unit <clock> synthesized (advanced).
 
 Synthesizing (advanced) Unit <counter_10>.
 The following registers are absorbed into counter <Cnt>: 1 register on signal <Cnt>.
@@ -503,8 +442,8 @@ Unit <decoder_38> synthesized (advanced).
 
 Synthesizing (advanced) Unit <display_driver>.
 The following registers are absorbed into counter <pos>: 1 register on signal <pos>.
-	Multiplier <Mmult_PWR_10_o_clockHour[7]_MuLt_8_OUT> in block <display_driver> and adder/subtractor <Msub_GND_11_o_GND_11_o_sub_10_OUT<3:0>> in block <display_driver> are combined into a MAC<Maddsub_PWR_10_o_clockHour[7]_MuLt_8_OUT>.
-	Multiplier <Mmult_n0065> in block <display_driver> and adder/subtractor <Madd_n0042_Madd> in block <display_driver> are combined into a MAC<Maddsub_n0065>.
+	Multiplier <Mmult_PWR_10_o_GND_11_o_MuLt_7_OUT> in block <display_driver> and adder/subtractor <Msub_GND_11_o_GND_11_o_sub_9_OUT<3:0>> in block <display_driver> are combined into a MAC<Maddsub_PWR_10_o_GND_11_o_MuLt_7_OUT>.
+	Multiplier <Mmult_n0067> in block <display_driver> and adder/subtractor <Madd_n0043_Madd> in block <display_driver> are combined into a MAC<Maddsub_n0067>.
 Unit <display_driver> synthesized (advanced).
 
 Synthesizing (advanced) Unit <seven_seg_driver>.
@@ -530,67 +469,44 @@ Macro Statistics
  8x8-bit single-port distributed Read Only RAM         : 1
 # MACs                                                 : 3
  4x4-to-4-bit MAC                                      : 1
- 4x4-to-5-bit MAC                                      : 1
+ 4x4-to-6-bit MAC                                      : 1
  4x4-to-7-bit MAC                                      : 1
-# Adders/Subtractors                                   : 13
- 1-bit adder                                           : 2
- 4-bit adder                                           : 3
- 5-bit adder                                           : 5
- 5-bit subtractor                                      : 1
- 8-bit adder                                           : 2
-# Counters                                             : 14
+# Adders/Subtractors                                   : 9
+ 4-bit adder                                           : 2
+ 6-bit adder                                           : 6
+ 6-bit subtractor                                      : 1
+# Counters                                             : 13
  3-bit up counter                                      : 1
  32-bit up counter                                     : 3
  4-bit up counter                                      : 8
- 8-bit up counter                                      : 2
-# Registers                                            : 67
- Flip-Flops                                            : 67
-# Comparators                                          : 21
+ 8-bit up counter                                      : 1
+# Registers                                            : 50
+ Flip-Flops                                            : 50
+# Comparators                                          : 22
+ 10-bit comparator lessequal                           : 1
  32-bit comparator greater                             : 3
  4-bit comparator greater                              : 6
  4-bit comparator lessequal                            : 2
- 5-bit comparator greater                              : 1
- 5-bit comparator lessequal                            : 2
- 6-bit comparator lessequal                            : 1
+ 6-bit comparator greater                              : 1
+ 6-bit comparator lessequal                            : 3
  7-bit comparator lessequal                            : 1
  8-bit comparator equal                                : 2
  8-bit comparator lessequal                            : 2
  9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 50
- 1-bit 2-to-1 multiplexer                              : 33
- 4-bit 2-to-1 multiplexer                              : 11
+# Multiplexers                                         : 36
+ 1-bit 2-to-1 multiplexer                              : 18
+ 4-bit 2-to-1 multiplexer                              : 12
  4-bit 7-to-1 multiplexer                              : 1
- 5-bit 2-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 4
+ 6-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 2
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <count_c6_0> has a constant value of 0 in block <counter_60>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_c6_1> has a constant value of 0 in block <counter_60>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_c6_2> has a constant value of 0 in block <counter_60>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <count_c6_3> has a constant value of 0 in block <counter_60>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <c6_clk> has a constant value of 1 in block <counter_60>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <time_light> (without init value) has a constant value of 0 in block <time_set>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <min_clk> of sequential type is unconnected in block <clock>.
-WARNING:Xst:1710 - FF/Latch <alarm_second/alarm_minute_0/Cnt_0> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_second/alarm_minute_0/Cnt_1> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_second/alarm_minute_0/Cnt_2> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_second/alarm_minute_0/Cnt_3> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_minute/alarm_minute_0/Cnt_0> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_minute/alarm_minute_0/Cnt_1> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_minute/alarm_minute_0/Cnt_2> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_minute/alarm_minute_0/Cnt_3> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_second/alarm_minute_1/Cnt_0> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_second/alarm_minute_1/Cnt_1> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_second/alarm_minute_1/Cnt_2> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_second/alarm_minute_1/Cnt_3> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_minute/alarm_minute_1/Cnt_0> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_minute/alarm_minute_1/Cnt_1> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_minute/alarm_minute_1/Cnt_2> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_minute/alarm_minute_1/Cnt_3> (without init value) has a constant value of 0 in block <clock>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <GND_11_o_PWR_10_o_div_6/Madd_GND_12_o_b[3]_add_1_OUT_Madd1> of sequential type is unconnected in block <display_driver>.
 
 Optimizing unit <top_module> ...
 
@@ -604,20 +520,8 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CntH_3> (without in
 Optimizing unit <alarm> ...
 
 Optimizing unit <display_driver> ...
-WARNING:Xst:1710 - FF/Latch <ddriver/d_num6_3> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ddriver/d_num6_2> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ddriver/d_num6_1> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ddriver/d_num6_0> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ddriver/d_num5_3> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ddriver/d_num5_2> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ddriver/d_num5_1> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ddriver/d_num5_0> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <clockSetting_1> of sequential type is unconnected in block <top_module>.
-WARNING:Xst:1293 - FF/Latch <clock_1/count_sec_7> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clock_1/count_sec_6> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clock_1/count_sec_5> has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ddriver/d_num3_3> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <alarm_1/alarm_minute_1/Cnt_3> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ddriver/d_num1_3> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <alarm_1/alarm_minute_1/Cnt_3> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -629,8 +533,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 168
- Flip-Flops                                            : 168
+# Registers                                            : 182
+ Flip-Flops                                            : 182
 
 =========================================================================
 
@@ -653,23 +557,24 @@ Top Level Output File Name         : top_module.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 505
+# BELS                             : 495
 #      GND                         : 1
-#      INV                         : 8
+#      INV                         : 14
 #      LUT1                        : 9
-#      LUT2                        : 51
-#      LUT3                        : 94
-#      LUT4                        : 23
-#      LUT5                        : 48
-#      LUT6                        : 31
-#      MUXCY                       : 124
+#      LUT2                        : 43
+#      LUT3                        : 93
+#      LUT4                        : 32
+#      LUT5                        : 37
+#      LUT6                        : 35
+#      MUXCY                       : 120
 #      MUXF7                       : 2
 #      VCC                         : 1
-#      XORCY                       : 113
-# FlipFlops/Latches                : 168
-#      FD                          : 138
-#      FDCE                        : 19
-#      FDR                         : 10
+#      XORCY                       : 108
+# FlipFlops/Latches                : 182
+#      FD                          : 125
+#      FDCE                        : 35
+#      FDE                         : 9
+#      FDR                         : 12
 #      FDRE                        : 1
 # Clock Buffers                    : 3
 #      BUFG                        : 2
@@ -687,21 +592,20 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             166  out of  126800     0%  
- Number of Slice LUTs:                  264  out of  63400     0%  
-    Number used as Logic:               264  out of  63400     0%  
+ Number of Slice Registers:             182  out of  126800     0%  
+ Number of Slice LUTs:                  263  out of  63400     0%  
+    Number used as Logic:               263  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    270
-   Number with an unused Flip Flop:     104  out of    270    38%  
-   Number with an unused LUT:             6  out of    270     2%  
-   Number of fully used LUT-FF pairs:   160  out of    270    59%  
-   Number of unique control sets:        12
+ Number of LUT Flip Flop pairs used:    278
+   Number with an unused Flip Flop:      96  out of    278    34%  
+   Number with an unused LUT:            15  out of    278     5%  
+   Number of fully used LUT-FF pairs:   167  out of    278    60%  
+   Number of unique control sets:        19
 
 IO Utilization: 
  Number of IOs:                          27
  Number of bonded IOBs:                  27  out of    210    12%  
-    IOB Flip Flops/Latches:               2
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
@@ -728,12 +632,15 @@ Clock Information:
 -----------------------------------+-----------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                               | Load  |
 -----------------------------------+-----------------------------------------------------+-------+
-clk_2/clk_divd                     | BUFG                                                | 25    |
+clk_2/clk_divd                     | BUFG                                                | 34    |
 clk_1/clk_divd                     | NONE(calltime/Light)                                | 9     |
 clk                                | BUFGP                                               | 99    |
-clk_3/clk_divd                     | BUFG                                                | 29    |
+clock_1/alarm_minute/c6_clk        | NONE(clock_1/alarm_minute/alarm_minute_1/Cnt_3)     | 4     |
+clock_1/alarm_second/c6_clk        | NONE(clock_1/alarm_second/alarm_minute_1/Cnt_3)     | 4     |
+clock_1/min_clk                    | NONE(clock_1/alarm_minute/alarm_minute_0/Cnt_3)     | 5     |
+clk_3/clk_divd                     | BUFG                                                | 21    |
 clock_1/hour_clk                   | NONE(clock_1/alarm_hour/CntH_1)                     | 6     |
-alarmMin<7>                        | NONE(ddriver/Msub_GND_11_o_GND_11_o_sub_6_OUT<4:0>1)| 1     |
+alarmMin<7>                        | NONE(ddriver/Msub_GND_11_o_GND_11_o_sub_6_OUT<5:0>1)| 1     |
 -----------------------------------+-----------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -746,8 +653,8 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 3.769ns (Maximum Frequency: 265.289MHz)
-   Minimum input arrival time before clock: 3.445ns
-   Maximum output required time after clock: 1.323ns
+   Minimum input arrival time before clock: 1.608ns
+   Maximum output required time after clock: 1.336ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -771,7 +678,7 @@ Delay:               2.398ns (Levels of Logic = 2)
     ----------------------------------------  ------------
      FDR:C->Q              3   0.361   0.703  calltime/counter_6 (calltime/counter_6)
      LUT6:I0->O            1   0.097   0.511  calltime/_n00341 (calltime/_n00341)
-     LUT5:I2->O            1   0.097   0.279  calltime/_n00344 (calltime/_n0034)
+     LUT6:I3->O            1   0.097   0.279  calltime/_n00344 (calltime/_n0034)
      FDRE:R                    0.349          calltime/Light
     ----------------------------------------
     Total                      2.398ns (0.904ns logic, 1.494ns route)
@@ -839,36 +746,101 @@ Delay:               3.769ns (Levels of Logic = 40)
                                        (70.9% logic, 29.1% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk_3/clk_divd'
-  Clock period: 2.669ns (frequency: 374.658MHz)
-  Total number of paths / destination ports: 367 / 33
+Timing constraint: Default period analysis for Clock 'clock_1/alarm_minute/c6_clk'
+  Clock period: 1.078ns (frequency: 927.902MHz)
+  Total number of paths / destination ports: 13 / 4
 -------------------------------------------------------------------------
-Delay:               2.669ns (Levels of Logic = 4)
-  Source:            clock_1/count_sec_0 (FF)
-  Destination:       clock_1/count_min_4 (FF)
-  Source Clock:      clk_3/clk_divd rising
-  Destination Clock: clk_3/clk_divd rising
+Delay:               1.078ns (Levels of Logic = 1)
+  Source:            clock_1/alarm_minute/alarm_minute_1/Cnt_0 (FF)
+  Destination:       clock_1/alarm_minute/alarm_minute_1/Cnt_0 (FF)
+  Source Clock:      clock_1/alarm_minute/c6_clk rising
+  Destination Clock: clock_1/alarm_minute/c6_clk rising
 
-  Data Path: clock_1/count_sec_0 to clock_1/count_min_4
+  Data Path: clock_1/alarm_minute/alarm_minute_1/Cnt_0 to clock_1/alarm_minute/alarm_minute_1/Cnt_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               8   0.361   0.715  clock_1/count_sec_0 (clock_1/count_sec_0)
-     LUT5:I0->O           10   0.097   0.337  clock_1/GND_3_o_GND_3_o_equal_2_o<7>1 (clock_1/GND_3_o_GND_3_o_equal_2_o)
-     LUT5:I4->O            2   0.097   0.299  clock_1/Mmux_count_min[7]_count_min[7]_mux_8_OUT52121 (clock_1/Mmux_count_min[7]_count_min[7]_mux_8_OUT5212)
-     LUT5:I4->O            2   0.097   0.561  clock_1/Mmux_count_min[7]_count_min[7]_mux_8_OUT5211 (clock_1/Mmux_count_min[7]_count_min[7]_mux_8_OUT521)
-     LUT5:I1->O            1   0.097   0.000  clock_1/Mmux_count_min[7]_count_min[7]_mux_8_OUT52 (clock_1/count_min[7]_count_min[7]_mux_8_OUT<4>)
-     FD:D                      0.008          clock_1/count_min_4
+     FDCE:C->Q             9   0.361   0.316  clock_1/alarm_minute/alarm_minute_1/Cnt_0 (clock_1/alarm_minute/alarm_minute_1/Cnt_0)
+     INV:I->O              1   0.113   0.279  clock_1/alarm_minute/alarm_minute_1/Mcount_Cnt_xor<0>11_INV_0 (clock_1/alarm_minute/alarm_minute_1/Mcount_Cnt)
+     FDCE:D                    0.008          clock_1/alarm_minute/alarm_minute_1/Cnt_0
     ----------------------------------------
-    Total                      2.669ns (0.757ns logic, 1.912ns route)
-                                       (28.4% logic, 71.6% route)
+    Total                      1.078ns (0.482ns logic, 0.596ns route)
+                                       (44.7% logic, 55.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_1/alarm_second/c6_clk'
+  Clock period: 1.064ns (frequency: 940.115MHz)
+  Total number of paths / destination ports: 13 / 4
+-------------------------------------------------------------------------
+Delay:               1.064ns (Levels of Logic = 1)
+  Source:            clock_1/alarm_second/alarm_minute_1/Cnt_0 (FF)
+  Destination:       clock_1/alarm_second/alarm_minute_1/Cnt_0 (FF)
+  Source Clock:      clock_1/alarm_second/c6_clk rising
+  Destination Clock: clock_1/alarm_second/c6_clk rising
+
+  Data Path: clock_1/alarm_second/alarm_minute_1/Cnt_0 to clock_1/alarm_second/alarm_minute_1/Cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.361   0.302  clock_1/alarm_second/alarm_minute_1/Cnt_0 (clock_1/alarm_second/alarm_minute_1/Cnt_0)
+     INV:I->O              1   0.113   0.279  clock_1/alarm_second/alarm_minute_1/Mcount_Cnt_xor<0>11_INV_0 (clock_1/alarm_second/alarm_minute_1/Mcount_Cnt)
+     FDCE:D                    0.008          clock_1/alarm_second/alarm_minute_1/Cnt_0
+    ----------------------------------------
+    Total                      1.064ns (0.482ns logic, 0.582ns route)
+                                       (45.3% logic, 54.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_1/min_clk'
+  Clock period: 1.430ns (frequency: 699.350MHz)
+  Total number of paths / destination ports: 17 / 6
+-------------------------------------------------------------------------
+Delay:               1.430ns (Levels of Logic = 1)
+  Source:            clock_1/alarm_minute/alarm_minute_0/Cnt_0 (FF)
+  Destination:       clock_1/alarm_minute/c6_clk (FF)
+  Source Clock:      clock_1/min_clk rising
+  Destination Clock: clock_1/min_clk rising
+
+  Data Path: clock_1/alarm_minute/alarm_minute_0/Cnt_0 to clock_1/alarm_minute/c6_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            10   0.361   0.598  clock_1/alarm_minute/alarm_minute_0/Cnt_0 (clock_1/alarm_minute/alarm_minute_0/Cnt_0)
+     LUT4:I0->O            1   0.097   0.279  clock_1/_n0044_inv111 (clock_1/_n0044_inv1)
+     FDE:CE                    0.095          clock_1/alarm_minute/c6_clk
+    ----------------------------------------
+    Total                      1.430ns (0.553ns logic, 0.877ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_3/clk_divd'
+  Clock period: 2.631ns (frequency: 380.098MHz)
+  Total number of paths / destination ports: 114 / 26
+-------------------------------------------------------------------------
+Delay:               2.631ns (Levels of Logic = 3)
+  Source:            alarm_1/alarm_minute_0/Cnt_0 (FF)
+  Destination:       alarm_1/alarmLight (FF)
+  Source Clock:      clk_3/clk_divd rising
+  Destination Clock: clk_3/clk_divd rising
+
+  Data Path: alarm_1/alarm_minute_0/Cnt_0 to alarm_1/alarmLight
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.361   0.721  alarm_1/alarm_minute_0/Cnt_0 (alarm_1/alarm_minute_0/Cnt_0)
+     LUT6:I0->O            1   0.097   0.556  alarm_1/curMin[7]_alarmClockMinute[7]_equal_3_o81 (alarm_1/curMin[7]_alarmClockMinute[7]_equal_3_o8)
+     LUT6:I2->O            1   0.097   0.693  alarm_1/curMin[7]_alarmClockMinute[7]_equal_3_o83 (alarm_1/curMin[7]_alarmClockMinute[7]_equal_3_o)
+     LUT6:I0->O            1   0.097   0.000  alarm_1/alarmLight_rstpot (alarm_1/alarmLight_rstpot)
+     FD:D                      0.008          alarm_1/alarmLight
+    ----------------------------------------
+    Total                      2.631ns (0.660ns logic, 1.971ns route)
+                                       (25.1% logic, 74.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_1/hour_clk'
-  Clock period: 1.968ns (frequency: 508.053MHz)
+  Clock period: 1.973ns (frequency: 506.971MHz)
   Total number of paths / destination ports: 46 / 8
 -------------------------------------------------------------------------
-Delay:               1.968ns (Levels of Logic = 2)
+Delay:               1.973ns (Levels of Logic = 2)
   Source:            clock_1/alarm_hour/CntL_3 (FF)
   Destination:       clock_1/alarm_hour/CntH_1 (FF)
   Source Clock:      clock_1/hour_clk rising
@@ -878,20 +850,20 @@ Delay:               1.968ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            11   0.361   0.740  clock_1/alarm_hour/CntL_3 (clock_1/alarm_hour/CntL_3)
+     FDCE:C->Q            12   0.361   0.744  clock_1/alarm_hour/CntL_3 (clock_1/alarm_hour/CntL_3)
      LUT6:I0->O            1   0.097   0.295  clock_1/alarm_hour/_n0058_inv1 (clock_1/alarm_hour/_n0058_inv1)
      LUT2:I1->O            2   0.097   0.283  clock_1/alarm_hour/_n0058_inv2 (clock_1/alarm_hour/_n0058_inv)
      FDCE:CE                   0.095          clock_1/alarm_hour/CntH_0
     ----------------------------------------
-    Total                      1.968ns (0.650ns logic, 1.318ns route)
+    Total                      1.973ns (0.650ns logic, 1.322ns route)
                                        (33.0% logic, 67.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_2/clk_divd'
-  Clock period: 1.528ns (frequency: 654.536MHz)
-  Total number of paths / destination ports: 39 / 7
+  Clock period: 1.629ns (frequency: 613.836MHz)
+  Total number of paths / destination ports: 53 / 7
 -------------------------------------------------------------------------
-Delay:               1.528ns (Levels of Logic = 2)
+Delay:               1.629ns (Levels of Logic = 2)
   Source:            ddriver/pos_0 (FF)
   Destination:       ddriver/num_1 (FF)
   Source Clock:      clk_2/clk_divd rising
@@ -901,19 +873,19 @@ Delay:               1.528ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              17   0.361   0.586  ddriver/pos_0 (ddriver/pos_0)
-     LUT3:I0->O            1   0.097   0.379  ddriver/Mmux_pos[2]_PWR_10_o_wide_mux_27_OUT21 (ddriver/Mmux_pos[2]_PWR_10_o_wide_mux_27_OUT2)
-     LUT5:I3->O            1   0.097   0.000  ddriver/Mmux_pos[2]_PWR_10_o_wide_mux_27_OUT23 (ddriver/pos[2]_PWR_10_o_wide_mux_27_OUT<1>)
+     FD:C->Q              20   0.361   0.771  ddriver/pos_0 (ddriver/pos_0)
+     LUT6:I1->O            1   0.097   0.295  ddriver/Mmux_pos[2]_PWR_10_o_wide_mux_29_OUT21 (ddriver/Mmux_pos[2]_PWR_10_o_wide_mux_29_OUT2)
+     LUT6:I5->O            1   0.097   0.000  ddriver/Mmux_pos[2]_PWR_10_o_wide_mux_29_OUT23 (ddriver/pos[2]_PWR_10_o_wide_mux_29_OUT<1>)
      FD:D                      0.008          ddriver/num_1
     ----------------------------------------
-    Total                      1.528ns (0.563ns logic, 0.965ns route)
-                                       (36.9% logic, 63.1% route)
+    Total                      1.629ns (0.563ns logic, 1.066ns route)
+                                       (34.6% logic, 65.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_2/clk_divd'
-  Total number of paths / destination ports: 61 / 24
+  Total number of paths / destination ports: 43 / 35
 -------------------------------------------------------------------------
-Offset:              3.445ns (Levels of Logic = 7)
+Offset:              1.608ns (Levels of Logic = 3)
   Source:            chooseTimeMode (PAD)
   Destination:       ddriver/d_num2_3 (FF)
   Destination Clock: clk_2/clk_divd rising
@@ -923,20 +895,73 @@ Offset:              3.445ns (Levels of Logic = 7)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   0.001   0.693  chooseTimeMode_IBUF (chooseTimeMode_IBUF)
-     LUT6:I0->O           12   0.097   0.562  ddriver/GND_11_o_GND_11_o_AND_22_o1 (ddriver/GND_11_o_GND_11_o_AND_22_o)
-     LUT3:I0->O            5   0.097   0.712  ddriver/Mmux_clockHour[7]_GND_11_o_mux_6_OUT31 (ddriver/clockHour[7]_GND_11_o_mux_6_OUT<2>)
-     LUT6:I0->O            2   0.097   0.299  ddriver/clockHour[7]_PWR_10_o_mod_7/Mmux_o31 (ddriver/clockHour[7]_PWR_10_o_mod_7_OUT<2>)
-     LUT4:I3->O            0   0.097   0.000  ddriver/Maddsub_PWR_10_o_clockHour[7]_MuLt_8_OUT_Madd1_lut<3> (ddriver/Maddsub_PWR_10_o_clockHour[7]_MuLt_8_OUT_Madd1_lut<3>)
-     XORCY:LI->O           1   0.173   0.511  ddriver/Maddsub_PWR_10_o_clockHour[7]_MuLt_8_OUT_Madd1_xor<3> (ddriver/Maddsub_PWR_10_o_clockHour[7]_MuLt_8_OUT_Madd_31)
-     LUT5:I2->O            1   0.097   0.000  ddriver/Mmux_alarmHour[3]_GND_11_o_mux_11_OUT41 (ddriver/alarmHour[3]_GND_11_o_mux_11_OUT<3>)
-     FD:D                      0.008          ddriver/d_num2_3
+     LUT6:I0->O            7   0.097   0.711  ddriver/GND_11_o_GND_11_o_AND_24_o (ddriver/GND_11_o_GND_11_o_AND_24_o)
+     LUT6:I1->O            1   0.097   0.000  ddriver/Mmux_alarmHour[3]_clockHour[3]_mux_13_OUT31 (ddriver/alarmHour[3]_clockHour[3]_mux_13_OUT<2>)
+     FD:D                      0.008          ddriver/d_num2_2
     ----------------------------------------
-    Total                      3.445ns (0.667ns logic, 2.778ns route)
-                                       (19.4% logic, 80.6% route)
+    Total                      1.608ns (0.203ns logic, 1.405ns route)
+                                       (12.6% logic, 87.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_1/alarm_minute/c6_clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.737ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       clock_1/alarm_minute/alarm_minute_1/Cnt_3 (FF)
+  Destination Clock: clock_1/alarm_minute/c6_clk rising
+
+  Data Path: reset to clock_1/alarm_minute/alarm_minute_1/Cnt_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.001   0.387  reset_IBUF (reset_IBUF)
+     FDCE:CLR                  0.349          clock_1/alarm_minute/alarm_minute_1/Cnt_0
+    ----------------------------------------
+    Total                      0.737ns (0.350ns logic, 0.387ns route)
+                                       (47.5% logic, 52.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_1/alarm_second/c6_clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.737ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       clock_1/alarm_second/alarm_minute_1/Cnt_3 (FF)
+  Destination Clock: clock_1/alarm_second/c6_clk rising
+
+  Data Path: reset to clock_1/alarm_second/alarm_minute_1/Cnt_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.001   0.387  reset_IBUF (reset_IBUF)
+     FDCE:CLR                  0.349          clock_1/alarm_second/alarm_minute_1/Cnt_0
+    ----------------------------------------
+    Total                      0.737ns (0.350ns logic, 0.387ns route)
+                                       (47.5% logic, 52.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_1/min_clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.737ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       clock_1/alarm_minute/alarm_minute_0/Cnt_3 (FF)
+  Destination Clock: clock_1/min_clk rising
+
+  Data Path: reset to clock_1/alarm_minute/alarm_minute_0/Cnt_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.001   0.387  reset_IBUF (reset_IBUF)
+     FDCE:CLR                  0.349          clock_1/alarm_minute/alarm_minute_0/Cnt_0
+    ----------------------------------------
+    Total                      0.737ns (0.350ns logic, 0.387ns route)
+                                       (47.5% logic, 52.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_3/clk_divd'
-  Total number of paths / destination ports: 15 / 15
+  Total number of paths / destination ports: 22 / 22
 -------------------------------------------------------------------------
 Offset:              1.271ns (Levels of Logic = 3)
   Source:            alarmOn (PAD)
@@ -948,7 +973,7 @@ Offset:              1.271ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   0.001   0.511  alarmOn_IBUF (alarmOn_IBUF)
-     LUT5:I2->O            1   0.097   0.556  alarm_1/alarmOn_curHour[7]_AND_5_o2 (alarm_1/alarmOn_curHour[7]_AND_5_o2)
+     LUT5:I2->O            1   0.097   0.556  alarm_1/alarmOn_curHour[7]_AND_7_o2 (alarm_1/alarmOn_curHour[7]_AND_7_o2)
      LUT6:I2->O            1   0.097   0.000  alarm_1/alarmLight_rstpot (alarm_1/alarmLight_rstpot)
      FD:D                      0.008          alarm_1/alarmLight
     ----------------------------------------
@@ -957,28 +982,29 @@ Offset:              1.271ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_1/hour_clk'
-  Total number of paths / destination ports: 6 / 6
+  Total number of paths / destination ports: 12 / 12
 -------------------------------------------------------------------------
-Offset:              0.713ns (Levels of Logic = 1)
-  Source:            reset (PAD)
+Offset:              0.947ns (Levels of Logic = 2)
+  Source:            EN_siginal (PAD)
   Destination:       clock_1/alarm_hour/CntH_1 (FF)
   Destination Clock: clock_1/hour_clk rising
 
-  Data Path: reset to clock_1/alarm_hour/CntH_1
+  Data Path: EN_siginal to clock_1/alarm_hour/CntH_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            19   0.001   0.363  reset_IBUF (reset_IBUF)
-     FDCE:CLR                  0.349          clock_1/alarm_hour/CntL_0
+     IBUF:I->O            21   0.001   0.470  EN_siginal_IBUF (EN_siginal_IBUF)
+     LUT2:I0->O            2   0.097   0.283  clock_1/alarm_hour/_n0058_inv2 (clock_1/alarm_hour/_n0058_inv)
+     FDCE:CE                   0.095          clock_1/alarm_hour/CntH_0
     ----------------------------------------
-    Total                      0.713ns (0.350ns logic, 0.363ns route)
-                                       (49.1% logic, 50.9% route)
+    Total                      0.947ns (0.193ns logic, 0.754ns route)
+                                       (20.4% logic, 79.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_2/clk_divd'
   Total number of paths / destination ports: 52 / 15
 -------------------------------------------------------------------------
-Offset:              1.323ns (Levels of Logic = 2)
+Offset:              1.336ns (Levels of Logic = 2)
   Source:            ddriver/pos_0 (FF)
   Destination:       an<7> (PAD)
   Source Clock:      clk_2/clk_divd rising
@@ -987,12 +1013,12 @@ Offset:              1.323ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              17   0.361   0.586  ddriver/pos_0 (ddriver/pos_0)
+     FD:C->Q              20   0.361   0.599  ddriver/pos_0 (ddriver/pos_0)
      LUT3:I0->O            1   0.097   0.279  decd38/Mram_sel111 (an_1_OBUF)
      OBUF:I->O                 0.000          an_1_OBUF (an<1>)
     ----------------------------------------
-    Total                      1.323ns (0.458ns logic, 0.865ns route)
-                                       (34.6% logic, 65.4% route)
+    Total                      1.336ns (0.458ns logic, 0.878ns route)
+                                       (34.3% logic, 65.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_3/clk_divd'
@@ -1046,55 +1072,86 @@ clk            |    3.769|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk_1/clk_divd
-----------------+---------+---------+---------+---------+
-                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------+---------+---------+---------+---------+
-clk_1/clk_divd  |    2.398|         |         |         |
-clock_1/hour_clk|    4.184|         |         |         |
-----------------+---------+---------+---------+---------+
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+clk_1/clk_divd             |    2.398|         |         |         |
+clock_1/alarm_minute/c6_clk|    2.685|         |         |         |
+clock_1/hour_clk           |    4.190|         |         |         |
+clock_1/min_clk            |    2.817|         |         |         |
+---------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk_2/clk_divd
-----------------+---------+---------+---------+---------+
-                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------+---------+---------+---------+---------+
-alarmMin<7>     |    3.839|         |         |         |
-clk_2/clk_divd  |    1.528|         |         |         |
-clk_3/clk_divd  |    0.798|         |         |         |
-clock_1/hour_clk|    7.029|         |         |         |
-----------------+---------+---------+---------+---------+
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+alarmMin<7>                |    3.526|         |         |         |
+clk_2/clk_divd             |    1.629|         |         |         |
+clk_3/clk_divd             |    0.798|         |         |         |
+clock_1/alarm_minute/c6_clk|    0.882|         |         |         |
+clock_1/alarm_second/c6_clk|    0.671|         |         |         |
+clock_1/hour_clk           |    6.719|         |         |         |
+clock_1/min_clk            |    0.887|         |         |         |
+---------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk_3/clk_divd
-----------------+---------+---------+---------+---------+
-                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------+---------+---------+---------+---------+
-clk_2/clk_divd  |    2.104|         |         |         |
-clk_3/clk_divd  |    2.669|         |         |         |
-clock_1/hour_clk|    1.980|         |         |         |
-----------------+---------+---------+---------+---------+
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+clk_2/clk_divd             |    1.417|         |         |         |
+clk_3/clk_divd             |    2.631|         |         |         |
+clock_1/alarm_minute/c6_clk|    2.453|         |         |         |
+clock_1/alarm_second/c6_clk|    1.776|         |         |         |
+clock_1/hour_clk           |    1.986|         |         |         |
+clock_1/min_clk            |    2.634|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock_1/alarm_minute/c6_clk
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+clock_1/alarm_minute/c6_clk|    1.078|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock_1/alarm_second/c6_clk
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+clock_1/alarm_second/c6_clk|    1.064|         |         |         |
+---------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clock_1/hour_clk
 ----------------+---------+---------+---------+---------+
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-clk_3/clk_divd  |    1.235|         |         |         |
-clock_1/hour_clk|    1.968|         |         |         |
+clock_1/hour_clk|    1.973|         |         |         |
 ----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock_1/min_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock_1/min_clk|    1.430|         |         |         |
+---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.51 secs
+Total CPU time to Xst completion: 11.88 secs
  
 --> 
 
-Total memory usage is 4685108 kilobytes
+Total memory usage is 4685028 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  102 (   0 filtered)
+Number of warnings :   25 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

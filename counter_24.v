@@ -8,7 +8,7 @@
 
 
 module counter_24(CP, EN, reset, CntH, CntL);
-   input reset, EN, CP;
+    input reset, EN, CP;
 	output reg [3:0] CntH, CntL;
     always @ (posedge CP or posedge reset) begin
 	 

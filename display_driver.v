@@ -28,6 +28,7 @@
  *		chooseMode: 选择时间形式12/24
 
  * output params:
+		//time_mode: 12/24小时
  *      seg: 数码管显示信号
  *      seg_pos: 数码管片选信号
  */
@@ -40,6 +41,7 @@ module display_driver(
 		input [7:0] alarmHour,
 		input [7:0] alarmMin,
 		input chooseMode,
+		//output reg time_mode,
 		output reg [2:0]pos,
 		output reg [3:0]num  
 		);
@@ -50,17 +52,21 @@ module display_driver(
 	reg [3:0] d_num4;
 	reg [3:0] d_num5;
 	reg [3:0] d_num6;
-	reg [4:0] hours;
+	reg [5:0] hours;
 
 	always @(posedge clk) begin
 	  if(~chooseButtion) begin
 		hours = clockHour[7:4]*10 + clockHour[3:0];
-		if(chooseMode == 0 && hours > 12) begin
-			hours = hours-12;
-		end
 		
-		d_num1 = hours % 10;
-		d_num2 = hours - 10*d_num1;
+		if(chooseMode == 1 && hours > 12) begin
+			hours = hours-12;
+			d_num1 = hours / 10;
+			d_num2 = hours - 10*d_num1;
+		end
+		else begin
+			d_num1 = clockHour[7:4];
+			d_num2 = clockHour[3:0];
+		end
 		d_num3 = clockMin[7:4];
 		d_num4 = clockMin[3:0];
 		d_num5 = clockSec[7:4];

@@ -1,0 +1,7 @@
+verilog work "counter_6.v"
+verilog work "counter_10.v"
+verilog work "counter_60.v"
+verilog work "counter_24.v"
+verilog work "clock.v"
+verilog work "testclock.v"
+verilog work "F:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

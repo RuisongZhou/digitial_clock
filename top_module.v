@@ -31,7 +31,7 @@
  *
  
  * @output params:     
- *      time_mode:时间模式 12/24
+ *      //time_mode:时间模式 12/24
  *      alarm_light: 闹钟指示灯
  *      time_light: AM / PM 指示灯
  *		BaoshiLight： 报整点时数
@@ -78,7 +78,7 @@ module top_module(
 	 clk_divider clk_3(.clk(clk), .delay(50_000_000), .clk_divd(clk_500ms));
 	 
 	 //时钟信号
-	 clock clock_1(.clk(clk_500ms), 
+	 clock clock_1(.clk(clk_1s), 
 						.reset(reset),
 						.en(EN_siginal), 
 						.settingButton(clockSetting),
@@ -88,7 +88,7 @@ module top_module(
 	 
 	//选择信号
 	always@(posedge clk_driver) begin
-		if(chooseButtion == 1) begin
+		if(~chooseButtion) begin
 			clockSetting = settingButtion;
 			alarmSetting = 0;
 		end
@@ -116,13 +116,14 @@ module top_module(
 
 	/* display driver, output 7-segment led */
 	display_driver ddriver(	.clk(clk_driver),
-							.chooseButtion(settingButtion[1:0]),
+							.chooseButtion(chooseButtion),
 							.clockHour(clockHour),
 							.clockMin(clockMin),
 							.clockSec(clockSec),
 							.alarmHour(alarmHour),
 							.alarmMin(alarmMin),
 							.chooseMode(chooseTimeMode),
+							//.time_mode(time_mode),
 							.pos(pos),
 							.num(num)	);
 	/* 3-8 decoder module, control an */

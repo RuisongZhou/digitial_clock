@@ -48,49 +48,41 @@ module clock(	input clk,
 	
 	reg min_clk;
 	reg hour_clk;
-	reg [7:0]count_sec;
-	reg [7:0]count_min;
-	reg EN_signal;
+
 	initial begin
-		min_clk = 1;
-		hour_clk = 1;
-		count_min = 0;
-		count_sec = 0;
+		min_clk = 0;
+		hour_clk = 0;
 	end
 	
 	//分钟和小时的分频
 	always @(posedge clk) begin
-	
-		if(count_sec == 30) begin
-			count_sec = 0;
-			min_clk = ~min_clk;
-			count_min = count_min+1;
-		end
-		if(count_min == 60) begin
-				count_min = 0;
-				hour_clk = ~hour_clk;			
-		end
 		
 		if(settingButton[0]) begin
-			min_clk = ~min_clk;
-			min_clk = ~min_clk;
-			count_min = count_min+2;
+			min_clk <= ~min_clk;
+			min_clk <= ~min_clk;
 		end
 
 		if(settingButton[1]) begin
-			hour_clk = ~hour_clk;
-			hour_clk = ~hour_clk;
+			hour_clk <= ~hour_clk;
+			hour_clk <= ~hour_clk;
 		end
-		count_sec =count_sec+1;
-		EN_signal = en;
+		
+		if(curSec[3:0] == 9 && curSec[7:4] == 5) begin
+			min_clk <= ~min_clk;
+			min_clk <= ~min_clk;
+		end
+		if(curMin[3:0] == 9 && curMin[7:4] == 5) begin
+			hour_clk <= ~hour_clk;
+			hour_clk <= ~hour_clk;
+		end
 	end
 	
 	//重置小时,分钟,秒
-	counter_60 alarm_second(.CP(clk), .reset(reset), .EN(EN_signal),.Cnt(clockSec));
+	counter_60 alarm_second(.CP(clk), .reset(reset), .EN(en),.Cnt(clockSec));
 	
-	counter_60 alarm_minute(.CP(min_clk), .reset(reset), .EN(EN_signal),.Cnt(clockMinute));
+	counter_60 alarm_minute(.CP(min_clk), .reset(reset), .EN(en),.Cnt(clockMinute));
 	
-	counter_24 alarm_hour(.CntH(clockHour[7:4]),.CntL(clockHour[3:0]), .reset(reset),.EN(EN_signal), .CP(hour_clk));
+	counter_24 alarm_hour(.CntH(clockHour[7:4]),.CntL(clockHour[3:0]), .reset(reset),.EN(en), .CP(hour_clk));
 	
 	always @(*) begin
 	  curHour = clockHour;

@@ -1,0 +1,5 @@
+verilog isim_temp "counter_6.v"
+verilog isim_temp "counter_10.v"
+verilog isim_temp "counter_60.v"
+verilog isim_temp "testCounter.v"
+verilog isim_temp "F:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

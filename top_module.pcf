@@ -1,8 +1,9 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Mar 27 21:20:51 2019
+// Written by: Map P.20131013 on Tue Apr 02 21:19:03 2019
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "chooseTimeMode" LOCATE = SITE "M13" LEVEL 1;
 COMP "reset" LOCATE = SITE "N17" LEVEL 1;
 COMP "alarmOn" LOCATE = SITE "L16" LEVEL 1;
 COMP "EN_siginal" LOCATE = SITE "J15" LEVEL 1;

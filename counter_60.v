@@ -27,19 +27,21 @@ module counter_60( 	input CP,
 	wire [7:0] clock;
 	reg c6_clk;
 	initial begin
-		c6_clk = 1;
+		c6_clk = 0;
+		Cnt = 0;
 	end
-	reg [3:0] count_c6 = 0;
-	always @(posedge clk) begin
-		if(count_c6 == 3) begin
-			count_c6 = 0;
-			c6_clk = ~c6_clk;
+	
+	always @(posedge CP) begin
+		if(Cnt[3:0] == 9) begin
+			c6_clk <= 1;
 		end
-		c6_clk = c6_clk+1;
+		else begin
+			c6_clk <= 0;
+		end
 	end
 							
 	//设置分钟
-	counter_10 alarm_minute_0(.Cnt(clock[3:0]),.reset(reset),.EN(EN),.CP(clk));										
+	counter_10 alarm_minute_0(.Cnt(clock[3:0]),.reset(reset),.EN(EN),.CP(CP));										
 	counter_6  alarm_minute_1(.Cnt(clock[7:4]),.reset(reset),.EN(EN),.CP(c6_clk));
 	
 	always@(*) begin

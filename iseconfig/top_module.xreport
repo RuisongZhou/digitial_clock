@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-03-27T21:11:11</DateModified>
+  <DateModified>2019-04-02T17:21:10</DateModified>
   <ModuleName>top_module</ModuleName>
-  <SummaryTimeStamp>2019-03-27T16:49:55</SummaryTimeStamp>
+  <SummaryTimeStamp>2019-04-02T16:42:50</SummaryTimeStamp>
   <SavedFilePath>F:/FPGAcode/digital_clock/iseconfig/top_module.xreport</SavedFilePath>
   <ImplementationReportsDirectory>F:/FPGAcode/digital_clock\</ImplementationReportsDirectory>
   <DateInitialized>2019-03-27T15:22:34</DateInitialized>

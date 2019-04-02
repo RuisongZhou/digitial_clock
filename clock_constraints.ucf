@@ -18,6 +18,7 @@ NET "an[7]" LOC = J17;
 NET "BaoshiLight" LOC = H17;
 NET "alarm_light" LOC = V11;
 NET "time_light" LOC = V15;
+//NET "time_mode" LOC = K15;
 
 NET "alarmON" LOC = L16;
 NET "settingButtion[0]" LOC = P17;

@@ -1,0 +1,27 @@
+Running: F:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o F:/FPGAcode/digital_clock/testclock_isim_beh.exe -prj F:/FPGAcode/digital_clock/testclock_beh.prj work.testclock work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "F:/FPGAcode/digital_clock/counter_6.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/counter_10.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/counter_60.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/counter_24.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/clock.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/testclock.v" into library work
+Analyzing Verilog file "F:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module counter_10
+Compiling module counter_6
+Compiling module counter_60
+Compiling module counter_24
+Compiling module clock
+Compiling module testclock
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 7 Verilog Units
+Built simulation executable F:/FPGAcode/digital_clock/testclock_isim_beh.exe
+Fuse Memory Usage: 30116 KB
+Fuse CPU Usage: 624 ms

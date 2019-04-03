@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Reading design: top_module.prj
 
@@ -158,6 +158,9 @@ WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\calltime.v" Line 43: Result
 WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\calltime.v" Line 46: Result of 9-bit expression is truncated to fit in 8-bit target.
 WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\calltime.v" Line 50: Result of 9-bit expression is truncated to fit in 8-bit target.
 
+Elaborating module <time_set>.
+WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\time_set.v" Line 28: Result of 9-bit expression is truncated to fit in 6-bit target.
+
 Elaborating module <display_driver>.
 WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 59: Result of 9-bit expression is truncated to fit in 6-bit target.
 WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 62: Result of 32-bit expression is truncated to fit in 6-bit target.
@@ -172,10 +175,7 @@ WARNING:HDLCompiler:413 - "F:\FPGAcode\digital_clock\display_driver.v" Line 112:
 Elaborating module <decoder_38>.
 
 Elaborating module <seven_seg_driver>.
-WARNING:HDLCompiler:189 - "F:\FPGAcode\digital_clock\top_module.v" Line 133: Size mismatch in connection of port <point>. Formal port size is 1-bit while actual signal size is 32-bit.
-
-Elaborating module <time_set>.
-WARNING:HDLCompiler:634 - "F:\FPGAcode\digital_clock\top_module.v" Line 135: Net <clk_divider> does not have a driver.
+WARNING:HDLCompiler:189 - "F:\FPGAcode\digital_clock\top_module.v" Line 136: Size mismatch in connection of port <point>. Formal port size is 1-bit while actual signal size is 32-bit.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -183,7 +183,6 @@ WARNING:HDLCompiler:634 - "F:\FPGAcode\digital_clock\top_module.v" Line 135: Net
 
 Synthesizing Unit <top_module>.
     Related source file is "F:\FPGAcode\digital_clock\top_module.v".
-WARNING:Xst:653 - Signal <clk_divider> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 2-bit register for signal <alarmSetting>.
     Found 2-bit register for signal <clockSetting>.
     Summary:
@@ -206,6 +205,7 @@ Unit <clk_divider> synthesized.
 
 Synthesizing Unit <clock>.
     Related source file is "F:\FPGAcode\digital_clock\clock.v".
+WARNING:Xst:647 - Input <clk_500ms> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <hour_clk>.
     Found 1-bit register for signal <min_clk>.
     Summary:
@@ -257,9 +257,10 @@ Unit <counter_24> synthesized.
 
 Synthesizing Unit <alarm>.
     Related source file is "F:\FPGAcode\digital_clock\alarm.v".
+WARNING:Xst:647 - Input <curSec> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <alarmLight>.
-    Found 8-bit comparator equal for signal <curMin[7]_alarmClockMinute[7]_equal_3_o> created at line 53
-    Found 8-bit comparator equal for signal <curHour[7]_alarmClockHour[7]_equal_4_o> created at line 53
+    Found 8-bit comparator equal for signal <curMin[7]_alarmClockMinute[7]_equal_3_o> created at line 56
+    Found 8-bit comparator equal for signal <curHour[7]_alarmClockHour[7]_equal_4_o> created at line 56
     Summary:
 	inferred   1 D-type flip-flop(s).
 	inferred   2 Comparator(s).
@@ -280,6 +281,19 @@ Synthesizing Unit <CallTime>.
 	inferred   1 Comparator(s).
 Unit <CallTime> synthesized.
 
+Synthesizing Unit <time_set>.
+    Related source file is "F:\FPGAcode\digital_clock\time_set.v".
+    Found 1-bit register for signal <time_light>.
+    Found 8-bit adder for signal <n0007> created at line 28.
+    Found 4x4-bit multiplier for signal <n0009> created at line 28.
+    Found 6-bit comparator lessequal for signal <n0002> created at line 29
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <time_set> synthesized.
+
 Synthesizing Unit <display_driver>.
     Related source file is "F:\FPGAcode\digital_clock\display_driver.v".
     Found 4-bit register for signal <d_num2>.
@@ -291,13 +305,13 @@ Synthesizing Unit <display_driver>.
     Found 4-bit register for signal <num>.
     Found 4-bit register for signal <d_num1>.
     Found 8-bit adder for signal <n0043> created at line 59.
-    Found 3-bit adder for signal <pos[2]_GND_11_o_add_30_OUT> created at line 112.
-    Found 6-bit subtractor for signal <GND_11_o_GND_11_o_sub_6_OUT<5:0>> created at line 62.
-    Found 4-bit subtractor for signal <GND_11_o_GND_11_o_sub_9_OUT<3:0>> created at line 64.
+    Found 3-bit adder for signal <pos[2]_GND_12_o_add_30_OUT> created at line 112.
+    Found 6-bit subtractor for signal <GND_12_o_GND_12_o_sub_6_OUT<5:0>> created at line 62.
+    Found 4-bit subtractor for signal <GND_12_o_GND_12_o_sub_9_OUT<3:0>> created at line 64.
     Found 4x4-bit multiplier for signal <n0067> created at line 59.
-    Found 4x4-bit multiplier for signal <PWR_10_o_GND_11_o_MuLt_7_OUT> created at line 64.
-    Found 4-bit 7-to-1 multiplexer for signal <pos[2]_PWR_10_o_wide_mux_29_OUT> created at line 88.
-    Found 6-bit comparator greater for signal <GND_11_o_clockHour[7]_LessThan_5_o> created at line 61
+    Found 4x4-bit multiplier for signal <PWR_11_o_GND_12_o_MuLt_7_OUT> created at line 64.
+    Found 4-bit 7-to-1 multiplexer for signal <pos[2]_PWR_11_o_wide_mux_29_OUT> created at line 88.
+    Found 6-bit comparator greater for signal <GND_12_o_clockHour[7]_LessThan_5_o> created at line 61
     Summary:
 	inferred   2 Multiplier(s).
 	inferred   4 Adder/Subtractor(s).
@@ -308,12 +322,12 @@ Unit <display_driver> synthesized.
 
 Synthesizing Unit <div_6u_4u>.
     Related source file is "".
-    Found 10-bit adder for signal <GND_12_o_b[3]_add_1_OUT> created at line 0.
-    Found 9-bit adder for signal <GND_12_o_b[3]_add_3_OUT> created at line 0.
-    Found 8-bit adder for signal <GND_12_o_b[3]_add_5_OUT> created at line 0.
-    Found 7-bit adder for signal <GND_12_o_b[3]_add_7_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_13_o_b[3]_add_1_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_13_o_b[3]_add_3_OUT> created at line 0.
+    Found 8-bit adder for signal <GND_13_o_b[3]_add_5_OUT> created at line 0.
+    Found 7-bit adder for signal <GND_13_o_b[3]_add_7_OUT> created at line 0.
     Found 6-bit adder for signal <a[5]_b[3]_add_9_OUT[5:0]> created at line 0.
-    Found 6-bit adder for signal <a[5]_GND_12_o_add_11_OUT[5:0]> created at line 0.
+    Found 6-bit adder for signal <a[5]_GND_13_o_add_11_OUT[5:0]> created at line 0.
     Found 10-bit comparator lessequal for signal <BUS_0001> created at line 0
     Found 9-bit comparator lessequal for signal <BUS_0002> created at line 0
     Found 8-bit comparator lessequal for signal <BUS_0003> created at line 0
@@ -341,16 +355,6 @@ Synthesizing Unit <seven_seg_driver>.
 	inferred   1 RAM(s).
 Unit <seven_seg_driver> synthesized.
 
-Synthesizing Unit <time_set>.
-    Related source file is "F:\FPGAcode\digital_clock\time_set.v".
-    Found 1-bit register for signal <time_light>.
-    Found 4-bit comparator lessequal for signal <n0000> created at line 29
-    Found 4-bit comparator lessequal for signal <n0002> created at line 29
-    Summary:
-	inferred   1 D-type flip-flop(s).
-	inferred   2 Comparator(s).
-Unit <time_set> synthesized.
-
 =========================================================================
 HDL Synthesis Report
 
@@ -358,9 +362,9 @@ Macro Statistics
 # RAMs                                                 : 2
  16x8-bit single-port Read Only RAM                    : 1
  8x8-bit single-port Read Only RAM                     : 1
-# Multipliers                                          : 3
- 4x4-bit multiplier                                    : 3
-# Adders/Subtractors                                   : 25
+# Multipliers                                          : 4
+ 4x4-bit multiplier                                    : 4
+# Adders/Subtractors                                   : 26
  10-bit adder                                          : 1
  3-bit adder                                           : 1
  32-bit adder                                          : 3
@@ -369,7 +373,7 @@ Macro Statistics
  6-bit adder                                           : 2
  6-bit subtractor                                      : 1
  7-bit adder                                           : 1
- 8-bit adder                                           : 4
+ 8-bit adder                                           : 5
  9-bit adder                                           : 1
 # Registers                                            : 34
  1-bit register                                        : 10
@@ -378,13 +382,12 @@ Macro Statistics
  32-bit register                                       : 3
  4-bit register                                        : 17
  8-bit register                                        : 1
-# Comparators                                          : 22
+# Comparators                                          : 21
  10-bit comparator lessequal                           : 1
  32-bit comparator greater                             : 3
  4-bit comparator greater                              : 6
- 4-bit comparator lessequal                            : 2
  6-bit comparator greater                              : 1
- 6-bit comparator lessequal                            : 3
+ 6-bit comparator lessequal                            : 4
  7-bit comparator lessequal                            : 1
  8-bit comparator equal                                : 2
  8-bit comparator lessequal                            : 2
@@ -403,7 +406,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <time_light> (without init value) has a constant value of 0 in block <setting>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <CallTime>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
@@ -442,7 +444,7 @@ Unit <decoder_38> synthesized (advanced).
 
 Synthesizing (advanced) Unit <display_driver>.
 The following registers are absorbed into counter <pos>: 1 register on signal <pos>.
-	Multiplier <Mmult_PWR_10_o_GND_11_o_MuLt_7_OUT> in block <display_driver> and adder/subtractor <Msub_GND_11_o_GND_11_o_sub_9_OUT<3:0>> in block <display_driver> are combined into a MAC<Maddsub_PWR_10_o_GND_11_o_MuLt_7_OUT>.
+	Multiplier <Mmult_PWR_11_o_GND_12_o_MuLt_7_OUT> in block <display_driver> and adder/subtractor <Msub_GND_12_o_GND_12_o_sub_9_OUT<3:0>> in block <display_driver> are combined into a MAC<Maddsub_PWR_11_o_GND_12_o_MuLt_7_OUT>.
 	Multiplier <Mmult_n0067> in block <display_driver> and adder/subtractor <Madd_n0043_Madd> in block <display_driver> are combined into a MAC<Maddsub_n0067>.
 Unit <display_driver> synthesized (advanced).
 
@@ -460,6 +462,10 @@ INFO:Xst:3231 - The small RAM <Mram_seg> will be implemented on LUTs in order to
     -----------------------------------------------------------------------
 Unit <seven_seg_driver> synthesized (advanced).
 
+Synthesizing (advanced) Unit <time_set>.
+	Multiplier <Mmult_n0009> in block <time_set> and adder/subtractor <Madd_n0007_Madd> in block <time_set> are combined into a MAC<Maddsub_n0009>.
+Unit <time_set> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
@@ -467,9 +473,9 @@ Macro Statistics
 # RAMs                                                 : 2
  16x8-bit single-port distributed Read Only RAM        : 1
  8x8-bit single-port distributed Read Only RAM         : 1
-# MACs                                                 : 3
+# MACs                                                 : 4
  4x4-to-4-bit MAC                                      : 1
- 4x4-to-6-bit MAC                                      : 1
+ 4x4-to-6-bit MAC                                      : 2
  4x4-to-7-bit MAC                                      : 1
 # Adders/Subtractors                                   : 9
  4-bit adder                                           : 2
@@ -482,13 +488,12 @@ Macro Statistics
  8-bit up counter                                      : 1
 # Registers                                            : 50
  Flip-Flops                                            : 50
-# Comparators                                          : 22
+# Comparators                                          : 21
  10-bit comparator lessequal                           : 1
  32-bit comparator greater                             : 3
  4-bit comparator greater                              : 6
- 4-bit comparator lessequal                            : 2
  6-bit comparator greater                              : 1
- 6-bit comparator lessequal                            : 3
+ 6-bit comparator lessequal                            : 4
  7-bit comparator lessequal                            : 1
  8-bit comparator equal                                : 2
  8-bit comparator lessequal                            : 2
@@ -505,8 +510,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <time_light> (without init value) has a constant value of 0 in block <time_set>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <GND_11_o_PWR_10_o_div_6/Madd_GND_12_o_b[3]_add_1_OUT_Madd1> of sequential type is unconnected in block <display_driver>.
+WARNING:Xst:2677 - Node <GND_12_o_PWR_11_o_div_6/Madd_GND_13_o_b[3]_add_1_OUT_Madd1> of sequential type is unconnected in block <display_driver>.
 
 Optimizing unit <top_module> ...
 
@@ -533,8 +537,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 182
- Flip-Flops                                            : 182
+# Registers                                            : 183
+ Flip-Flops                                            : 183
 
 =========================================================================
 
@@ -557,25 +561,24 @@ Top Level Output File Name         : top_module.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 495
+# BELS                             : 503
 #      GND                         : 1
-#      INV                         : 14
-#      LUT1                        : 9
-#      LUT2                        : 43
-#      LUT3                        : 93
-#      LUT4                        : 32
+#      INV                         : 12
+#      LUT1                        : 11
+#      LUT2                        : 44
+#      LUT3                        : 91
+#      LUT4                        : 36
 #      LUT5                        : 37
 #      LUT6                        : 35
-#      MUXCY                       : 120
+#      MUXCY                       : 122
 #      MUXF7                       : 2
 #      VCC                         : 1
-#      XORCY                       : 108
-# FlipFlops/Latches                : 182
-#      FD                          : 125
+#      XORCY                       : 111
+# FlipFlops/Latches                : 183
+#      FD                          : 128
 #      FDCE                        : 35
-#      FDE                         : 9
+#      FDE                         : 8
 #      FDR                         : 12
-#      FDRE                        : 1
 # Clock Buffers                    : 3
 #      BUFG                        : 2
 #      BUFGP                       : 1
@@ -593,19 +596,20 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:             182  out of  126800     0%  
- Number of Slice LUTs:                  263  out of  63400     0%  
-    Number used as Logic:               263  out of  63400     0%  
+ Number of Slice LUTs:                  266  out of  63400     0%  
+    Number used as Logic:               266  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    278
-   Number with an unused Flip Flop:      96  out of    278    34%  
-   Number with an unused LUT:            15  out of    278     5%  
-   Number of fully used LUT-FF pairs:   167  out of    278    60%  
+ Number of LUT Flip Flop pairs used:    281
+   Number with an unused Flip Flop:      99  out of    281    35%  
+   Number with an unused LUT:            15  out of    281     5%  
+   Number of fully used LUT-FF pairs:   167  out of    281    59%  
    Number of unique control sets:        19
 
 IO Utilization: 
  Number of IOs:                          27
  Number of bonded IOBs:                  27  out of    210    12%  
+    IOB Flip Flops/Latches:               1
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
@@ -633,14 +637,14 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)                               | Load  |
 -----------------------------------+-----------------------------------------------------+-------+
 clk_2/clk_divd                     | BUFG                                                | 34    |
-clk_1/clk_divd                     | NONE(calltime/Light)                                | 9     |
+clk_3/clk_divd                     | NONE(setting/time_light)                            | 1     |
 clk                                | BUFGP                                               | 99    |
+clk_1/clk_divd                     | BUFG                                                | 30    |
 clock_1/alarm_minute/c6_clk        | NONE(clock_1/alarm_minute/alarm_minute_1/Cnt_3)     | 4     |
 clock_1/alarm_second/c6_clk        | NONE(clock_1/alarm_second/alarm_minute_1/Cnt_3)     | 4     |
 clock_1/min_clk                    | NONE(clock_1/alarm_minute/alarm_minute_0/Cnt_3)     | 5     |
-clk_3/clk_divd                     | BUFG                                                | 21    |
 clock_1/hour_clk                   | NONE(clock_1/alarm_hour/CntH_1)                     | 6     |
-alarmMin<7>                        | NONE(ddriver/Msub_GND_11_o_GND_11_o_sub_6_OUT<5:0>1)| 1     |
+alarmMin<7>                        | NONE(ddriver/Msub_GND_12_o_GND_12_o_sub_6_OUT<5:0>1)| 1     |
 -----------------------------------+-----------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -653,36 +657,13 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 3.769ns (Maximum Frequency: 265.289MHz)
-   Minimum input arrival time before clock: 1.608ns
+   Minimum input arrival time before clock: 1.667ns
    Maximum output required time after clock: 1.336ns
    Maximum combinational path delay: No path found
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'clk_1/clk_divd'
-  Clock period: 2.398ns (frequency: 417.066MHz)
-  Total number of paths / destination ports: 47 / 10
--------------------------------------------------------------------------
-Delay:               2.398ns (Levels of Logic = 2)
-  Source:            calltime/counter_6 (FF)
-  Destination:       calltime/Light (FF)
-  Source Clock:      clk_1/clk_divd rising
-  Destination Clock: clk_1/clk_divd rising
-
-  Data Path: calltime/counter_6 to calltime/Light
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q              3   0.361   0.703  calltime/counter_6 (calltime/counter_6)
-     LUT6:I0->O            1   0.097   0.511  calltime/_n00341 (calltime/_n00341)
-     LUT6:I3->O            1   0.097   0.279  calltime/_n00344 (calltime/_n0034)
-     FDRE:R                    0.349          calltime/Light
-    ----------------------------------------
-    Total                      2.398ns (0.904ns logic, 1.494ns route)
-                                       (37.7% logic, 62.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
@@ -746,6 +727,31 @@ Delay:               3.769ns (Levels of Logic = 40)
                                        (70.9% logic, 29.1% route)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'clk_1/clk_divd'
+  Clock period: 2.845ns (frequency: 351.444MHz)
+  Total number of paths / destination ports: 171 / 35
+-------------------------------------------------------------------------
+Delay:               2.845ns (Levels of Logic = 4)
+  Source:            alarm_1/alarm_minute_0/Cnt_0 (FF)
+  Destination:       alarm_1/alarmLight (FF)
+  Source Clock:      clk_1/clk_divd rising
+  Destination Clock: clk_1/clk_divd rising
+
+  Data Path: alarm_1/alarm_minute_0/Cnt_0 to alarm_1/alarmLight
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.361   0.721  alarm_1/alarm_minute_0/Cnt_0 (alarm_1/alarm_minute_0/Cnt_0)
+     LUT6:I0->O            1   0.097   0.556  alarm_1/curMin[7]_alarmClockMinute[7]_equal_3_o81 (alarm_1/curMin[7]_alarmClockMinute[7]_equal_3_o8)
+     LUT6:I2->O            2   0.097   0.516  alarm_1/curMin[7]_alarmClockMinute[7]_equal_3_o83 (alarm_1/curMin[7]_alarmClockMinute[7]_equal_3_o)
+     LUT5:I2->O            1   0.097   0.295  alarm_1/alarmOn_curHour[7]_AND_9_o3 (alarm_1/alarmOn_curHour[7]_AND_9_o)
+     LUT4:I3->O            1   0.097   0.000  alarm_1/alarmLight_rstpot (alarm_1/alarmLight_rstpot)
+     FD:D                      0.008          alarm_1/alarmLight
+    ----------------------------------------
+    Total                      2.845ns (0.757ns logic, 2.088ns route)
+                                       (26.6% logic, 73.4% route)
+
+=========================================================================
 Timing constraint: Default period analysis for Clock 'clock_1/alarm_minute/c6_clk'
   Clock period: 1.078ns (frequency: 927.902MHz)
   Total number of paths / destination ports: 13 / 4
@@ -769,10 +775,10 @@ Delay:               1.078ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_1/alarm_second/c6_clk'
-  Clock period: 1.064ns (frequency: 940.115MHz)
+  Clock period: 1.069ns (frequency: 935.804MHz)
   Total number of paths / destination ports: 13 / 4
 -------------------------------------------------------------------------
-Delay:               1.064ns (Levels of Logic = 1)
+Delay:               1.069ns (Levels of Logic = 1)
   Source:            clock_1/alarm_second/alarm_minute_1/Cnt_0 (FF)
   Destination:       clock_1/alarm_second/alarm_minute_1/Cnt_0 (FF)
   Source Clock:      clock_1/alarm_second/c6_clk rising
@@ -782,65 +788,41 @@ Delay:               1.064ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             6   0.361   0.302  clock_1/alarm_second/alarm_minute_1/Cnt_0 (clock_1/alarm_second/alarm_minute_1/Cnt_0)
+     FDCE:C->Q             7   0.361   0.307  clock_1/alarm_second/alarm_minute_1/Cnt_0 (clock_1/alarm_second/alarm_minute_1/Cnt_0)
      INV:I->O              1   0.113   0.279  clock_1/alarm_second/alarm_minute_1/Mcount_Cnt_xor<0>11_INV_0 (clock_1/alarm_second/alarm_minute_1/Mcount_Cnt)
      FDCE:D                    0.008          clock_1/alarm_second/alarm_minute_1/Cnt_0
     ----------------------------------------
-    Total                      1.064ns (0.482ns logic, 0.582ns route)
-                                       (45.3% logic, 54.7% route)
+    Total                      1.069ns (0.482ns logic, 0.587ns route)
+                                       (45.1% logic, 54.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_1/min_clk'
-  Clock period: 1.430ns (frequency: 699.350MHz)
-  Total number of paths / destination ports: 17 / 6
+  Clock period: 1.078ns (frequency: 927.902MHz)
+  Total number of paths / destination ports: 16 / 5
 -------------------------------------------------------------------------
-Delay:               1.430ns (Levels of Logic = 1)
+Delay:               1.078ns (Levels of Logic = 1)
   Source:            clock_1/alarm_minute/alarm_minute_0/Cnt_0 (FF)
-  Destination:       clock_1/alarm_minute/c6_clk (FF)
+  Destination:       clock_1/alarm_minute/alarm_minute_0/Cnt_0 (FF)
   Source Clock:      clock_1/min_clk rising
   Destination Clock: clock_1/min_clk rising
 
-  Data Path: clock_1/alarm_minute/alarm_minute_0/Cnt_0 to clock_1/alarm_minute/c6_clk
+  Data Path: clock_1/alarm_minute/alarm_minute_0/Cnt_0 to clock_1/alarm_minute/alarm_minute_0/Cnt_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            10   0.361   0.598  clock_1/alarm_minute/alarm_minute_0/Cnt_0 (clock_1/alarm_minute/alarm_minute_0/Cnt_0)
-     LUT4:I0->O            1   0.097   0.279  clock_1/_n0044_inv111 (clock_1/_n0044_inv1)
-     FDE:CE                    0.095          clock_1/alarm_minute/c6_clk
+     FDCE:C->Q             9   0.361   0.316  clock_1/alarm_minute/alarm_minute_0/Cnt_0 (clock_1/alarm_minute/alarm_minute_0/Cnt_0)
+     INV:I->O              1   0.113   0.279  clock_1/alarm_minute/alarm_minute_0/Mcount_Cnt_xor<0>11_INV_0 (clock_1/alarm_minute/alarm_minute_0/Mcount_Cnt)
+     FDCE:D                    0.008          clock_1/alarm_minute/alarm_minute_0/Cnt_0
     ----------------------------------------
-    Total                      1.430ns (0.553ns logic, 0.877ns route)
-                                       (38.7% logic, 61.3% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'clk_3/clk_divd'
-  Clock period: 2.631ns (frequency: 380.098MHz)
-  Total number of paths / destination ports: 114 / 26
--------------------------------------------------------------------------
-Delay:               2.631ns (Levels of Logic = 3)
-  Source:            alarm_1/alarm_minute_0/Cnt_0 (FF)
-  Destination:       alarm_1/alarmLight (FF)
-  Source Clock:      clk_3/clk_divd rising
-  Destination Clock: clk_3/clk_divd rising
-
-  Data Path: alarm_1/alarm_minute_0/Cnt_0 to alarm_1/alarmLight
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDCE:C->Q             7   0.361   0.721  alarm_1/alarm_minute_0/Cnt_0 (alarm_1/alarm_minute_0/Cnt_0)
-     LUT6:I0->O            1   0.097   0.556  alarm_1/curMin[7]_alarmClockMinute[7]_equal_3_o81 (alarm_1/curMin[7]_alarmClockMinute[7]_equal_3_o8)
-     LUT6:I2->O            1   0.097   0.693  alarm_1/curMin[7]_alarmClockMinute[7]_equal_3_o83 (alarm_1/curMin[7]_alarmClockMinute[7]_equal_3_o)
-     LUT6:I0->O            1   0.097   0.000  alarm_1/alarmLight_rstpot (alarm_1/alarmLight_rstpot)
-     FD:D                      0.008          alarm_1/alarmLight
-    ----------------------------------------
-    Total                      2.631ns (0.660ns logic, 1.971ns route)
-                                       (25.1% logic, 74.9% route)
+    Total                      1.078ns (0.482ns logic, 0.596ns route)
+                                       (44.7% logic, 55.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock_1/hour_clk'
-  Clock period: 1.973ns (frequency: 506.971MHz)
+  Clock period: 1.987ns (frequency: 503.398MHz)
   Total number of paths / destination ports: 46 / 8
 -------------------------------------------------------------------------
-Delay:               1.973ns (Levels of Logic = 2)
+Delay:               1.987ns (Levels of Logic = 2)
   Source:            clock_1/alarm_hour/CntL_3 (FF)
   Destination:       clock_1/alarm_hour/CntH_1 (FF)
   Source Clock:      clock_1/hour_clk rising
@@ -850,13 +832,13 @@ Delay:               1.973ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            12   0.361   0.744  clock_1/alarm_hour/CntL_3 (clock_1/alarm_hour/CntL_3)
+     FDCE:C->Q            15   0.361   0.758  clock_1/alarm_hour/CntL_3 (clock_1/alarm_hour/CntL_3)
      LUT6:I0->O            1   0.097   0.295  clock_1/alarm_hour/_n0058_inv1 (clock_1/alarm_hour/_n0058_inv1)
      LUT2:I1->O            2   0.097   0.283  clock_1/alarm_hour/_n0058_inv2 (clock_1/alarm_hour/_n0058_inv)
      FDCE:CE                   0.095          clock_1/alarm_hour/CntH_0
     ----------------------------------------
-    Total                      1.973ns (0.650ns logic, 1.322ns route)
-                                       (33.0% logic, 67.0% route)
+    Total                      1.987ns (0.650ns logic, 1.336ns route)
+                                       (32.7% logic, 67.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_2/clk_divd'
@@ -874,8 +856,8 @@ Delay:               1.629ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              20   0.361   0.771  ddriver/pos_0 (ddriver/pos_0)
-     LUT6:I1->O            1   0.097   0.295  ddriver/Mmux_pos[2]_PWR_10_o_wide_mux_29_OUT21 (ddriver/Mmux_pos[2]_PWR_10_o_wide_mux_29_OUT2)
-     LUT6:I5->O            1   0.097   0.000  ddriver/Mmux_pos[2]_PWR_10_o_wide_mux_29_OUT23 (ddriver/pos[2]_PWR_10_o_wide_mux_29_OUT<1>)
+     LUT6:I1->O            1   0.097   0.295  ddriver/Mmux_pos[2]_PWR_11_o_wide_mux_29_OUT21 (ddriver/Mmux_pos[2]_PWR_11_o_wide_mux_29_OUT2)
+     LUT6:I5->O            1   0.097   0.000  ddriver/Mmux_pos[2]_PWR_11_o_wide_mux_29_OUT23 (ddriver/pos[2]_PWR_11_o_wide_mux_29_OUT<1>)
      FD:D                      0.008          ddriver/num_1
     ----------------------------------------
     Total                      1.629ns (0.563ns logic, 1.066ns route)
@@ -895,7 +877,7 @@ Offset:              1.608ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   0.001   0.693  chooseTimeMode_IBUF (chooseTimeMode_IBUF)
-     LUT6:I0->O            7   0.097   0.711  ddriver/GND_11_o_GND_11_o_AND_24_o (ddriver/GND_11_o_GND_11_o_AND_24_o)
+     LUT6:I0->O            7   0.097   0.711  ddriver/GND_12_o_GND_12_o_AND_26_o (ddriver/GND_12_o_GND_12_o_AND_26_o)
      LUT6:I1->O            1   0.097   0.000  ddriver/Mmux_alarmHour[3]_clockHour[3]_mux_13_OUT31 (ddriver/alarmHour[3]_clockHour[3]_mux_13_OUT<2>)
      FD:D                      0.008          ddriver/d_num2_2
     ----------------------------------------
@@ -960,25 +942,26 @@ Offset:              0.737ns (Levels of Logic = 1)
                                        (47.5% logic, 52.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_3/clk_divd'
-  Total number of paths / destination ports: 22 / 22
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_1/clk_divd'
+  Total number of paths / destination ports: 23 / 22
 -------------------------------------------------------------------------
-Offset:              1.271ns (Levels of Logic = 3)
+Offset:              1.667ns (Levels of Logic = 4)
   Source:            alarmOn (PAD)
   Destination:       alarm_1/alarmLight (FF)
-  Destination Clock: clk_3/clk_divd rising
+  Destination Clock: clk_1/clk_divd rising
 
   Data Path: alarmOn to alarm_1/alarmLight
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.001   0.511  alarmOn_IBUF (alarmOn_IBUF)
-     LUT5:I2->O            1   0.097   0.556  alarm_1/alarmOn_curHour[7]_AND_7_o2 (alarm_1/alarmOn_curHour[7]_AND_7_o2)
-     LUT6:I2->O            1   0.097   0.000  alarm_1/alarmLight_rstpot (alarm_1/alarmLight_rstpot)
+     IBUF:I->O             2   0.001   0.515  alarmOn_IBUF (alarmOn_IBUF)
+     LUT5:I2->O            1   0.097   0.556  alarm_1/alarmOn_curHour[7]_AND_9_o2 (alarm_1/alarmOn_curHour[7]_AND_9_o2)
+     LUT5:I1->O            1   0.097   0.295  alarm_1/alarmOn_curHour[7]_AND_9_o3 (alarm_1/alarmOn_curHour[7]_AND_9_o)
+     LUT4:I3->O            1   0.097   0.000  alarm_1/alarmLight_rstpot (alarm_1/alarmLight_rstpot)
      FD:D                      0.008          alarm_1/alarmLight
     ----------------------------------------
-    Total                      1.271ns (0.203ns logic, 1.068ns route)
-                                       (16.0% logic, 84.0% route)
+    Total                      1.667ns (0.300ns logic, 1.367ns route)
+                                       (18.0% logic, 82.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_1/hour_clk'
@@ -1021,13 +1004,13 @@ Offset:              1.336ns (Levels of Logic = 2)
                                        (34.3% logic, 65.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_3/clk_divd'
-  Total number of paths / destination ports: 1 / 1
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_1/clk_divd'
+  Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
 Offset:              0.645ns (Levels of Logic = 1)
   Source:            alarm_1/alarmLight (FF)
   Destination:       alarm_light (PAD)
-  Source Clock:      clk_3/clk_divd rising
+  Source Clock:      clk_1/clk_divd rising
 
   Data Path: alarm_1/alarmLight to alarm_light
                                 Gate     Net
@@ -1040,23 +1023,23 @@ Offset:              0.645ns (Levels of Logic = 1)
                                        (56.0% logic, 44.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_1/clk_divd'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_3/clk_divd'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              0.645ns (Levels of Logic = 1)
-  Source:            calltime/Light (FF)
-  Destination:       BaoshiLight (PAD)
-  Source Clock:      clk_1/clk_divd rising
+Offset:              0.640ns (Levels of Logic = 1)
+  Source:            setting/time_light (FF)
+  Destination:       time_light (PAD)
+  Source Clock:      clk_3/clk_divd rising
 
-  Data Path: calltime/Light to BaoshiLight
+  Data Path: setting/time_light to time_light
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.361   0.283  calltime/Light (calltime/Light)
-     OBUF:I->O                 0.000          BaoshiLight_OBUF (BaoshiLight)
+     FD:C->Q               1   0.361   0.279  setting/time_light (setting/time_light)
+     OBUF:I->O                 0.000          time_light_OBUF (time_light)
     ----------------------------------------
-    Total                      0.645ns (0.361ns logic, 0.283ns route)
-                                       (56.0% logic, 44.0% route)
+    Total                      0.640ns (0.361ns logic, 0.279ns route)
+                                       (56.4% logic, 43.6% route)
 
 =========================================================================
 
@@ -1076,10 +1059,12 @@ Clock to Setup on destination clock clk_1/clk_divd
                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------+---------+---------+---------+---------+
-clk_1/clk_divd             |    2.398|         |         |         |
-clock_1/alarm_minute/c6_clk|    2.685|         |         |         |
-clock_1/hour_clk           |    4.190|         |         |         |
-clock_1/min_clk            |    2.817|         |         |         |
+clk_1/clk_divd             |    2.845|         |         |         |
+clk_2/clk_divd             |    1.417|         |         |         |
+clock_1/alarm_minute/c6_clk|    2.663|         |         |         |
+clock_1/alarm_second/c6_clk|    1.841|         |         |         |
+clock_1/hour_clk           |    3.776|         |         |         |
+clock_1/min_clk            |    2.844|         |         |         |
 ---------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk_2/clk_divd
@@ -1088,26 +1073,21 @@ Clock to Setup on destination clock clk_2/clk_divd
 Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------+---------+---------+---------+---------+
 alarmMin<7>                |    3.526|         |         |         |
+clk_1/clk_divd             |    0.798|         |         |         |
 clk_2/clk_divd             |    1.629|         |         |         |
-clk_3/clk_divd             |    0.798|         |         |         |
 clock_1/alarm_minute/c6_clk|    0.882|         |         |         |
-clock_1/alarm_second/c6_clk|    0.671|         |         |         |
-clock_1/hour_clk           |    6.719|         |         |         |
-clock_1/min_clk            |    0.887|         |         |         |
+clock_1/alarm_second/c6_clk|    0.676|         |         |         |
+clock_1/hour_clk           |    6.724|         |         |         |
+clock_1/min_clk            |    0.882|         |         |         |
 ---------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk_3/clk_divd
----------------------------+---------+---------+---------+---------+
-                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------------------+---------+---------+---------+---------+
-clk_2/clk_divd             |    1.417|         |         |         |
-clk_3/clk_divd             |    2.631|         |         |         |
-clock_1/alarm_minute/c6_clk|    2.453|         |         |         |
-clock_1/alarm_second/c6_clk|    1.776|         |         |         |
-clock_1/hour_clk           |    1.986|         |         |         |
-clock_1/min_clk            |    2.634|         |         |         |
----------------------------+---------+---------+---------+---------+
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clock_1/hour_clk|    2.020|         |         |         |
+----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clock_1/alarm_minute/c6_clk
 ---------------------------+---------+---------+---------+---------+
@@ -1122,7 +1102,7 @@ Clock to Setup on destination clock clock_1/alarm_second/c6_clk
                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------+---------+---------+---------+---------+
-clock_1/alarm_second/c6_clk|    1.064|         |         |         |
+clock_1/alarm_second/c6_clk|    1.069|         |         |         |
 ---------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clock_1/hour_clk
@@ -1130,7 +1110,7 @@ Clock to Setup on destination clock clock_1/hour_clk
                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
-clock_1/hour_clk|    1.973|         |         |         |
+clock_1/hour_clk|    1.987|         |         |         |
 ----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clock_1/min_clk
@@ -1138,20 +1118,20 @@ Clock to Setup on destination clock clock_1/min_clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock_1/min_clk|    1.430|         |         |         |
+clock_1/min_clk|    1.078|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.88 secs
+Total CPU time to Xst completion: 12.33 secs
  
 --> 
 
-Total memory usage is 4685028 kilobytes
+Total memory usage is 4685044 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   25 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

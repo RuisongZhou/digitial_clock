@@ -78,13 +78,14 @@ module top_module(
 	 clk_divider clk_3(.clk(clk), .delay(50_000_000), .clk_divd(clk_500ms));
 	 
 	 //时钟信号
-	 clock clock_1(.clk(clk_1s), 
-						.reset(reset),
-						.en(EN_siginal), 
-						.settingButton(clockSetting),
-						.curHour(clockHour), 
-						.curMin(clockMin),
-						.curSec(clockSec)	);
+	 clock clock_1( .clk(clk_1s), 
+					.clk_500ms(clk_500ms),
+					.reset(reset),
+					.en(EN_siginal), 
+					.settingButton(clockSetting),
+					.curHour(clockHour), 
+					.curMin(clockMin),
+					.curSec(clockSec)	);
 	 
 	//选择信号
 	always@(posedge clk_driver) begin
@@ -101,19 +102,21 @@ module top_module(
 
 	 
 						
-	 alarm alarm_1(.clk(clk_500ms),
+	 alarm alarm_1(.clk(clk_1s),
 						.reset(reset),
 						.alarmOn(alarmOn),
 						.settingButton(alarmSetting[1:0]),
 						.curHour(clockHour),
 						.curMin(clockMin),
+						.curSec(clockSec),
 						.alarmLight(alarm_light),
 						.outHour(alarmHour),
 						.outMin(alarmMin)	);
 
 	/*call time when time is at o'clock*/
 	CallTime calltime(.clk(clk_1s), .Hour(clockHour), .Minute(clockMin), .Light(BaoshiLight));
-
+	//AM/PM 显示
+	time_set setting(.clk(clk_500ms), .curHour(clockHour), .time_light(time_light));
 	/* display driver, output 7-segment led */
 	display_driver ddriver(	.clk(clk_driver),
 							.chooseButtion(chooseButtion),
@@ -132,6 +135,6 @@ module top_module(
 	/* seven segment driver module */
 	seven_seg_driver ssd(.num(num), .point(0), .seg(seg_out));
 	
-	time_set setting(.clk(clk_divider), .curHour(clockHour), .time_light(time_light));
+	
 
 endmodule

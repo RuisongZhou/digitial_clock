@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Apr 02 21:19:03 2019
+// Written by: Map P.20131013 on Wed Apr 03 10:53:25 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -8,7 +8,7 @@ COMP "reset" LOCATE = SITE "N17" LEVEL 1;
 COMP "alarmOn" LOCATE = SITE "L16" LEVEL 1;
 COMP "EN_siginal" LOCATE = SITE "J15" LEVEL 1;
 COMP "BaoshiLight" LOCATE = SITE "H17" LEVEL 1;
-COMP "time_light" LOCATE = SITE "V15" LEVEL 1;
+COMP "time_light" LOCATE = SITE "V12" LEVEL 1;
 COMP "chooseButtion" LOCATE = SITE "V10" LEVEL 1;
 COMP "clk" LOCATE = SITE "E3" LEVEL 1;
 COMP "alarm_light" LOCATE = SITE "V11" LEVEL 1;

@@ -22,6 +22,7 @@ module alarm(	input clk,
 				input [1:0] settingButton, 
 				input [7:0] curHour,
 				input [7:0] curMin,
+				input [7:0] curSec,
 				
 				output reg [7:0] outHour, 
 				output reg [7:0] outMin, 
@@ -29,8 +30,10 @@ module alarm(	input clk,
 					
 	wire [7:0] alarmClockHour;
 	wire [7:0] alarmClockMinute;
+	reg light; //控制闹钟闪烁
 	initial begin
 		alarmLight = 0;
+		light = 0;
 	end
 	
 	
@@ -54,12 +57,13 @@ module alarm(	input clk,
 			 // 此时闹钟状态为1
 			 alarmLight = 1;
 		end
-		if (curMin != alarmClockMinute) begin
+		if (curMin != alarmClockMinute || ~alarmOn) begin
 			// 闹钟响了一分钟，此时闹钟状态为0
 			 alarmLight = 0;
 		end
 	end
-
+	
+			
 	always @(*) begin
 	  outHour = alarmClockHour;
 	  outMin = alarmClockMinute;		

@@ -23,10 +23,10 @@ module time_set(
 	input [7:0] curHour,
 	output reg  time_light
     );
-	
+	reg [5:0] hours;
 	always@(posedge clk) begin
-	
-		if(curHour[3:0] >=2 && curHour[7:4] >=1)begin
+		hours = curHour[7:4]*10 + curHour[3:0];
+		if(hours >= 12)begin
 			time_light = 1;
 		end
 		else begin

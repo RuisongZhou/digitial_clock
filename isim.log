@@ -1,10 +1,13 @@
 ISim log file
-Running: F:\FPGAcode\digital_clock\testclock_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb F:/FPGAcode/digital_clock/testclock_isim_beh.wdb 
+Running: F:\FPGAcode\digital_clock\testTop_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb F:/FPGAcode/digital_clock/testTop_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 This is a Full version of ISim.
+WARNING:  For instance uut/ssd/, width 1 of formal port point is not equal to width 32 of actual constant.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# run 10s
+Stopped at time : 2563891995 ns : File "F:/FPGAcode/digital_clock/testTop.v" Line 61

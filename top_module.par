@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-LAPTOP-74GP8HNJ::  Tue Apr 02 21:19:07 2019
+LAPTOP-74GP8HNJ::  Wed Apr 03 10:53:29 2019
 
 par -w -intstyle ise -ol high -mt off top_module_map.ncd top_module.ncd
 top_module.pcf 
@@ -32,24 +32,24 @@ Slice Logic Utilization:
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        223 out of  63,400    1%
-    Number used as logic:                      216 out of  63,400    1%
-      Number using O6 output only:              70
+  Number of Slice LUTs:                        225 out of  63,400    1%
+    Number used as logic:                      219 out of  63,400    1%
+      Number using O6 output only:              74
       Number using O5 output only:               6
-      Number using O5 and O6:                  140
+      Number using O5 and O6:                  139
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  19,000    0%
-    Number used exclusively as route-thrus:      7
-      Number with same-slice register load:      3
-      Number with same-slice carry load:         4
+    Number used exclusively as route-thrus:      6
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         6
       Number with other load:                    0
 
 Slice Logic Distribution:
   Number of occupied Slices:                    77 out of  15,850    1%
-  Number of LUT Flip Flop pairs used:          227
-    Number with an unused Flip Flop:            61 out of     227   26%
-    Number with an unused LUT:                   4 out of     227    1%
-    Number of fully used LUT-FF pairs:         162 out of     227   71%
+  Number of LUT Flip Flop pairs used:          238
+    Number with an unused Flip Flop:            68 out of     238   28%
+    Number with an unused LUT:                  13 out of     238    5%
+    Number of fully used LUT-FF pairs:         157 out of     238   65%
     Number of slice register sites lost
       to control set restrictions:               0 out of 126,800    0%
 
@@ -64,6 +64,7 @@ Slice Logic Distribution:
 IO Utilization:
   Number of bonded IOBs:                        27 out of     210   12%
     Number of LOCed IOBs:                       27 out of      27  100%
+    IOB Flip Flops:                              1
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     135    0%
@@ -74,7 +75,10 @@ Specific Feature Utilization:
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
   Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     300    0%
   Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
-  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        0 out of     300    0%
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        1 out of     300    1%
+    Number used as OLOGICE2s:                    1
+    Number used as OLOGICE3s:                    0
+    Number used as OSERDESE2s:                   0
   Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      24    0%
   Number of PHASER_OUT/PHASER_OUT_PHYs:          0 out of      24    0%
   Number of BSCANs:                              0 out of       4    0%
@@ -108,13 +112,13 @@ Finished initial Timing Analysis.  REAL time: 13 secs
 Starting Router
 
 
-Phase  1  : 1337 unrouted;      REAL time: 14 secs 
+Phase  1  : 1349 unrouted;      REAL time: 14 secs 
 
-Phase  2  : 814 unrouted;      REAL time: 14 secs 
+Phase  2  : 825 unrouted;      REAL time: 15 secs 
 
-Phase  3  : 189 unrouted;      REAL time: 15 secs 
+Phase  3  : 177 unrouted;      REAL time: 15 secs 
 
-Phase  4  : 189 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  4  : 177 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
 
 Updating file: top_module.ncd with current fully routed design.
 
@@ -148,31 +152,27 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP       |         N/A|     0.948ns|     N/A|           0
-  ck_1/alarm_second/c6_clk                  | HOLD        |     0.106ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.601ns|     N/A|           0
+  _2/clk_divd_BUFG                          | HOLD        |     0.262ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|     1.338ns|     N/A|           0
+  ck_1/min_clk                              | HOLD        |     0.249ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     2.101ns|     N/A|           0
+  _1/clk_divd_BUFG                          | HOLD        |     0.139ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|     1.415ns|     N/A|           0
+  ck_1/alarm_minute/c6_clk                  | HOLD        |     0.294ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     4.167ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.249ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|     2.170ns|     N/A|           0
+  ck_1/hour_clk                             | HOLD        |     0.133ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|     0.978ns|     N/A|           0
+  ck_1/alarm_second/c6_clk                  | HOLD        |     0.255ns|            |       0|           0
                                             | MINPERIOD   |         N/A|     1.000ns|     N/A|           0
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP       |         N/A|     1.498ns|     N/A|           0
-  ck_1/min_clk                              | HOLD        |     0.271ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.875ns|     N/A|           0
-  _3/clk_divd_BUFG                          | HOLD        |     0.215ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP       |         N/A|     0.987ns|     N/A|           0
-  ck_1/alarm_minute/c6_clk                  | HOLD        |     0.240ns|            |       0|           0
-                                            | MINPERIOD   |         N/A|     1.000ns|     N/A|           0
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.519ns|     N/A|           0
-  _2/clk_divd_BUFG                          | HOLD        |     0.266ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     4.247ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.260ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP       |         N/A|     1.913ns|     N/A|           0
-  ck_1/hour_clk                             | HOLD        |     0.189ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     2.427ns|     N/A|           0
-  _1/clk_divd                               | HOLD        |     0.231ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 

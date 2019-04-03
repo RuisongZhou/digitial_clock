@@ -1,4 +1,4 @@
-Running: F:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o F:/FPGAcode/digital_clock/testclock_isim_beh.exe -prj F:/FPGAcode/digital_clock/testclock_beh.prj work.testclock work.glbl 
+Running: F:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o F:/FPGAcode/digital_clock/testTop_isim_beh.exe -prj F:/FPGAcode/digital_clock/testTop_beh.prj work.testTop work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -7,21 +7,38 @@ Analyzing Verilog file "F:/FPGAcode/digital_clock/counter_6.v" into library work
 Analyzing Verilog file "F:/FPGAcode/digital_clock/counter_10.v" into library work
 Analyzing Verilog file "F:/FPGAcode/digital_clock/counter_60.v" into library work
 Analyzing Verilog file "F:/FPGAcode/digital_clock/counter_24.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/time_set.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/seven_seg_driver.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/display_driver.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/decoder_38.v" into library work
 Analyzing Verilog file "F:/FPGAcode/digital_clock/clock.v" into library work
-Analyzing Verilog file "F:/FPGAcode/digital_clock/testclock.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/clk_divider.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/calltime.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/alarm.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/top_module.v" into library work
+Analyzing Verilog file "F:/FPGAcode/digital_clock/testTop.v" into library work
 Analyzing Verilog file "F:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+WARNING:HDLCompiler:189 - "F:/FPGAcode/digital_clock/top_module.v" Line 136: Size mismatch in connection of port <point>. Formal port size is 1-bit while actual signal size is 32-bit.
 Completed static elaboration
+Compiling module clk_divider
 Compiling module counter_10
 Compiling module counter_6
 Compiling module counter_60
 Compiling module counter_24
 Compiling module clock
-Compiling module testclock
+Compiling module alarm
+Compiling module CallTime
+Compiling module time_set
+Compiling module display_driver
+Compiling module decoder_38
+Compiling module seven_seg_driver
+Compiling module top_module
+Compiling module testTop
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 7 Verilog Units
-Built simulation executable F:/FPGAcode/digital_clock/testclock_isim_beh.exe
-Fuse Memory Usage: 30116 KB
-Fuse CPU Usage: 624 ms
+Waiting for 8 sub-compilation(s) to finish...
+Compiled 15 Verilog Units
+Built simulation executable F:/FPGAcode/digital_clock/testTop_isim_beh.exe
+Fuse Memory Usage: 29812 KB
+Fuse CPU Usage: 859 ms
